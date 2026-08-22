@@ -304,3 +304,41 @@ document.addEventListener("DOMContentLoaded", function() {
     renderBanner("dealerbanner", dealers, 10);
 });
 </script>
+
+<!-- 이미지 확대용 모달 오버레이 -->
+<div id="imageModal" class="img-modal" onclick="closeImageModal()">
+  <span class="img-modal-close">&times;</span>
+  <img class="img-modal-content" id="modalImage" alt="확대된 이미지">
+</div>
+
+<script>
+  // 본문 내부의 모든 이미지에 클릭 이벤트 자동 바인딩
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('main img, .content img');
+    images.forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => {
+        openImageModal(img.src);
+      });
+    });
+  });
+
+  function openImageModal(src) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    modal.style.display = 'flex';
+    modalImg.src = src;
+    document.body.style.overflow = 'hidden'; // 배경 스크롤 방지
+  }
+
+  function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // 스크롤 원복
+  }
+
+  // ESC 키 누르면 모달 닫기
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeImageModal();
+  });
+</script>

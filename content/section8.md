@@ -30,7 +30,9 @@
 
 ![이미지 68](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0068.png)
 
-요약을 하자면 원하는 레이드 입장 레벨까지 아이템 레벨을 맞춘 후 효율표에 따라 순서대로 스펙업 하시면 됩니다.
+저런 외부 사이트들에서 본인의 현재 캐릭터에 최적화된 스펙업 순서들을 쉽게 찾을 수 있습니다.
+
+원하는 레이드 입장 레벨까지 아이템 레벨을 맞춘 후 효율표에 따라 순서대로 스펙업 하시면 됩니다.
 
 ## 재련
 
@@ -86,7 +88,9 @@
 
 지옥이 특수 재련의 핵심입니다. 
 
-특수 재련은 원래 레이드에서 재료가 많이 나오지 않아서 붙으면 좋고 아니면 말고 수준이였는데 지옥에서 주는 특수 재련 재료의 보상량이 많아서 부캐릭터의 경우 매주 지옥을 돌아서 나온 특수 재련 재료 만으로도 1700 이상을 찍는게 가능해졌습니다.
+특수 재련은 원래 레이드에서 재료가 많이 나오지 않아서 붙으면 좋고 아니면 말고 수준이였습니다.
+
+하지만 낙원이 나오면서 지옥에서 특수 재련 재료를 획득할 수 있게 되었고 부캐릭터의 경우 특수 재련 재료 만으로도 1700 이상을 찍는게 가능해졌습니다.
 
 지옥 보상 중 '특수 재련' 보상이 효율이 매우 좋으니 필요하다면 선택해서 사용하시면 좋겠습니다.
 
@@ -145,7 +149,8 @@
 
 [➡️ 각인](https://lostark.game.onstove.com/GameGuide/Pages/%EA%B0%81%EC%9D%B8)
 
-각인은 전투와 관련된 다양한 효과를 얻을 수 있는 시스템으로 원정대 단위로 공유됩니다. 각인 및 어빌리티 스톤을 장착하여 활성화 할 수 있습니다.
+각인은 전투와 관련된 다양한 효과를 얻을 수 있는 시스템으로 원정대 단위로 공유됩니다.  
+각인 및 어빌리티 스톤을 장착하여 활성화 할 수 있습니다.
 
 습득한 각인들 중 원하는 각인을 선택해서 최대 5개를 장착하게 되는데 각인은 습득한 각인서의 등급에 따라 전설/유물 등급으로 나뉘게 됩니다.
 
@@ -516,7 +521,7 @@
 
 이건 아크 그리드 창에서 나오는 코어를 위쪽부터 순서대로 번호를 붙여서 부르기 편하게 만든 방식입니다.
 
-![이미지 242](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0242.png)
+![이미지 242](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0242.png){.half-size}
 
 예를들어 위의 사진은 기상술사의 코어 표인데 질풍 기상술사의 경우
 
@@ -606,7 +611,7 @@
 ## 전설 아바타
 
 ![이미지 103](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0103.png)
-![이미지 104](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0104.png){.half-size}
+![이미지 104](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0104.png)
 
 전설 아바타는 부위당 스탯 2%의 옵션을 갖고 있는데 영웅 아바타는 부위당 스탯 1%입니다.
 

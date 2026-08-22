@@ -280,7 +280,7 @@ def main() -> int:
             return '<span class="crumb-section">목차</span>'
         label = next(short_label(l) for p, _f, l, *_ in SECTIONS if p == pid)
         return (
-            f'<span class="crumb-section">섹션 {n} {label}</span>'
+            f'<span class="crumb-section">{label}</span>'
             f'<span class="crumb-sep" style="visibility:hidden">›</span>'
             f'<span class="crumb-current"></span>'
         )
