@@ -32,6 +32,18 @@
 
 요약하자면 절대로 손해를 보는 패키지는 아니지만 쿠르잔 전선,가디언 토벌을 빼먹는 횟수가 많을수록 효율이 줄어드는 패키지입니다.
 
+## 크리스탈 패키지
+
+![이미지 272](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0272.png)
+
+크리스탈은 기본적으로 200개에 5,500원이 정가지만 패키지 구매시 더 싼 가격에 구매가 가능합니다.
+
+55,000원짜리 1회 한정 패키지, 월간 패키지 외에도 주기적으로 새로운 패키지가 나옵니다.
+
+![이미지 273](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0273.png){.half-size}
+
+구매한 크리스탈은 페온, 젬 가공 초기화권, 펫 기능 활성화 등에 사용됩니다. 
+
 
 ## 기타 패키지
 
