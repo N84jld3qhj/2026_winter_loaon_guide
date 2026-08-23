@@ -40,7 +40,7 @@
 
 55,000원짜리 1회 한정 패키지, 월간 패키지 외에도 주기적으로 새로운 패키지가 나옵니다.
 
-![이미지 273](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0273.png){.half-size}
+![이미지 273](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0273.png)
 
 구매한 크리스탈은 페온, 젬 가공 초기화권, 펫 기능 활성화 등에 사용됩니다. 
 
