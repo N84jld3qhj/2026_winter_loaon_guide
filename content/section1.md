@@ -31,6 +31,29 @@
 
 요약하자면 절대로 손해를 보는 패키지는 아니지만 쿠르잔 전선,가디언 토벌을 빼먹는 횟수가 많을수록 효율이 줄어드는 패키지입니다.
 
+## 베아트리스의 축복 / 니나브의 축복
+
+<div class="img-grid" markdown="1">
+
+![이미지 277](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0277.png)
+![이미지 278](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0278.png)
+
+</div>
+
+기간제 서비스 아이템입니다. 월정액 같은 느낌입니다.
+
+베아트리스의 축복은 과거에는 쓸만한 효과들이 있었지만 지금은 비프로스트를 제외하면 큰 의미가 없는 효과들입니다. 
+
+니나브의 축복은 영지 관련 효과들로 영지 제작으로 융화 재료를 만들 경우 효율이 좋습니다. 
+
+영지 제작 추가 슬롯 / 영지 저택 설치물 효과 추가 슬롯 / 영지 저택 의상 효과 추가 슬롯
+
+저 3가지 효과를 활용하면 영지 제작 수수료를 낮추고 제작 개수를 늘려 수익을 늘릴 수 있습니다.
+
+영지 제작을 하지 않는 유저라면 큰 의미 없습니다.
+
+아제나의 축복이 과금 효율이 훨씬 좋기 때문에 둘 다 추천하지는 않습니다.
+
 ## 크리스탈 패키지
 
 ![이미지 272](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0272.png)
