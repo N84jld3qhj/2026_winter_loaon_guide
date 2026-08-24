@@ -1054,7 +1054,7 @@ ol.rank-list li:nth-child(3)::before { background: #b45309; } /* 3위: 브론즈
    ========================================== */
 blockquote {
     margin: var(--sp-3) 0;
-    padding: var(--sp-2) var(--sp-2); /* --sp-3 -> --sp-2 로 변경 (또는 8px 16px) */
+    padding: var(--sp-1) var(--sp-2); /* --sp-3 -> --sp-2 로 변경 (또는 8px 16px) */
     background: var(--surface-2);
     border-left: 4px solid #f59e0b;
     border-radius: 0 var(--r-chip) var(--r-chip) 0;
