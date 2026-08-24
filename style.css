@@ -972,6 +972,27 @@ mark {
   color: var(--accent, #f59e0b);
 }
 
+/* 2열 그리드 배치 (모바일에서는 자동으로 1열 변환) */
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 한 줄에 2개씩 */
+    gap: var(--sp-3);                       /* 이미지 간 간격 */
+    margin: var(--sp-4) 0;
+}
+
+.img-grid img {
+    width: 100%;
+    height: auto;
+    margin: 0;                              /* 기존 margin 리셋 */
+}
+
+/* 모바일 화면 대응 */
+@media (max-width: 768px) {
+    .img-grid {
+        grid-template-columns: 1fr;         /* 화면이 좁아지면 1열로 세움 */
+    }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
