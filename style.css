@@ -972,24 +972,29 @@ mark {
   color: var(--accent, #f59e0b);
 }
 
-/* 2열 그리드 배치 (모바일에서는 자동으로 1열 변환) */
-.img-grid {
+/* img-grid 내부의 p 태그를 CSS Grid로 변경 */
+.img-grid p {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 한 줄에 2개씩 */
-    gap: var(--sp-3);                       /* 이미지 간 간격 */
-    margin: var(--sp-4) 0;
+    grid-template-columns: repeat(2, 1fr); /* 정확히 2등분 */
+    gap: var(--sp-3);                      /* 여백 */
+    align-items: start;                    /* 핵심: 높이를 강제로 맞추지 않고 각자 높이 유지 */
+    margin: 0;
+    padding: 0;
 }
 
-.img-grid img {
-    width: 100%;
-    height: auto;
-    margin: 0;                              /* 기존 margin 리셋 */
+.img-grid p img {
+    width: 100% !important;
+    max-width: 100%;
+    height: auto !important;               /* 비율 절대 유지 */
+    object-fit: contain;                   /* 찌그러짐 방지 */
+    margin: 0;
+    display: block;
 }
 
-/* 모바일 화면 대응 */
+/* 모바일 대응 (768px 이하 1열) */
 @media (max-width: 768px) {
-    .img-grid {
-        grid-template-columns: 1fr;         /* 화면이 좁아지면 1열로 세움 */
+    .img-grid p {
+        grid-template-columns: 1fr;
     }
 }
 

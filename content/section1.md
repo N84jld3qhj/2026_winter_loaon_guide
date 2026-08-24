@@ -39,7 +39,7 @@
 
 55,000원짜리 1회 한정 패키지, 월간 패키지 외에도 주기적으로 새로운 패키지가 나옵니다.
 
-<div class="img-grid">
+<div class="img-grid" markdown="1">
 
 ![이미지 273](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0273.png){.half-size}
 ![이미지 274](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0274.png){.half-size}
