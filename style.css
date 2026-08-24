@@ -998,6 +998,142 @@ mark {
     }
 }
 
+
+/* ==========================================
+   우선순위 리스트 (Rank List)
+   ========================================== */
+ol.rank-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--sp-4) 0;
+    counter-reset: rank-counter;
+}
+
+ol.rank-list li {
+    counter-increment: rank-counter;
+    display: flex;
+    align-items: center;
+    padding: var(--sp-3) var(--sp-4);
+    margin-bottom: var(--sp-2);
+    background: var(--bg-surface, #f8fafc);
+    border: 1px solid var(--border, #e2e8f0);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+ol.rank-list li:hover {
+    border-color: var(--accent);
+    transform: translateX(3px);
+}
+
+/* 숫자 뱃지 */
+ol.rank-list li::before {
+    content: counter(rank-counter);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: var(--sp-3);
+    background: var(--border, #cbd5e1);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+/* 상위 1~3위 강조 */
+ol.rank-list li:nth-child(1)::before { background: #f59e0b; } /* 1위: 골드 */
+ol.rank-list li:nth-child(2)::before { background: #94a3b8; } /* 2위: 실버 */
+ol.rank-list li:nth-child(3)::before { background: #b45309; } /* 3위: 브론즈 */
+
+/* ==========================================
+   마크다운 인용구 & 콜아웃 통합 (blockquote)
+   ========================================== */
+blockquote {
+    margin: var(--sp-3) 0;
+    padding: var(--sp-2) var(--sp-2); /* --sp-3 -> --sp-2 로 변경 (또는 8px 16px) */
+    background: var(--surface-2);
+    border-left: 4px solid #f59e0b;
+    border-radius: 0 var(--r-chip) var(--r-chip) 0;
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+blockquote > * {
+    margin: 0;
+}
+
+blockquote > * + * {
+    margin-top: var(--sp-2);
+}
+
+/* 특수 콜아웃 바리에이션 (필요 시 클래스 추가용) */
+blockquote.tip {
+    border-left-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.08);
+}
+
+blockquote.info {
+    border-left-color: #3b82f6;
+    background: rgba(59, 130, 246, 0.08);
+}
+
+blockquote.note {
+    border-left-color: #64748b;
+    background: rgba(100, 116, 139, 0.08);
+}
+
+/* ==========================================
+   공격 타입 비교 카드 (Attack Compare)
+   ========================================== */
+.attack-compare-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-3);
+    margin: var(--sp-4) 0;
+}
+
+.attack-card {
+    padding: var(--sp-4);
+    border-radius: 8px;
+    background: var(--bg-surface, #f8fafc);
+    border: 1px solid var(--border, #e2e8f0);
+}
+
+.attack-card.back {
+    border-top: 3px solid #3b82f6; /* 파란색 포인트 */
+}
+
+.attack-card.head {
+    border-top: 3px solid #ef4444; /* 빨간색 포인트 */
+}
+
+.attack-header {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: var(--sp-2);
+}
+
+.attack-card ul {
+    margin: 0;
+    padding-left: var(--sp-4);
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+
+
+@media (max-width: 768px) {
+    .attack-compare-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
