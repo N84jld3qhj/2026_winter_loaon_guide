@@ -12,7 +12,7 @@
 
 ## 게임 소개
 
-![레이드 컨텐츠](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/079.png)
+![레이드 컨텐츠](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0279.png)
 
 로스트아크는 **레이드**가 메인인 RPG 게임입니다.
 
