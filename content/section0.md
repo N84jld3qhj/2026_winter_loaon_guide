@@ -24,7 +24,7 @@
 <details>
   <summary>🔍 신뢰도 업데이트 내역</summary>
   <p markdown="1">
-    ![이미지 설명](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/280.png)
+    ![이미지 설명](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0280.png)
   </p>
 </details>
 <br>
