@@ -21,6 +21,14 @@
 
 ## 쌀먹 되나요?
 
+<details>
+  <summary>🔍 신뢰도 업데이트 내역</summary>
+  <p markdown="1">
+    ![이미지 설명](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/280.png)
+  </p>
+</details>
+<br>
+
 안됩니다. 
 
 신뢰도 생긴 이후로 전업 쌀먹은 불가능합니다. 매랜하러 가십쇼.
