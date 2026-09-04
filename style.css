@@ -1126,6 +1126,40 @@ blockquote.note {
     line-height: 1.6;
 }
 
+/* ==========================================
+   접기/펼치기 토글 (details / summary)
+   ========================================== */
+details {
+    margin: var(--sp-4) 0;
+    padding: var(--sp-3) var(--sp-4);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: var(--r-chip);
+}
+
+summary {
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+}
+
+summary:hover {
+    color: var(--accent);
+}
+
+/* 펼쳐졌을 때 상단 여백 보정 */
+details[open] summary {
+    margin-bottom: var(--sp-3);
+    padding-bottom: var(--sp-2);
+    border-bottom: 1px dashed var(--border);
+}
+
+details img {
+    margin: 0 auto;
+    display: block;
+}
 
 
 @media (max-width: 768px) {
