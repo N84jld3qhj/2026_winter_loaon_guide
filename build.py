@@ -21,6 +21,7 @@ import json
 import pathlib
 import re
 import shutil
+import struct
 import sys
 import markdown
 
@@ -151,6 +152,81 @@ def rewrite_images(html: str) -> str:
     return RAW_IMG_RE.sub("images/", html)
 
 
+# ---------- 이미지 CLS(레이아웃 시프트) 방지: width/height 자동 삽입 ----------
+# 외부 의존성(Pillow) 없이 PNG/JPEG/GIF 헤더에서 픽셀 크기만 읽는다.
+# img{}에 height:auto가 걸려있는 한, width/height 속성만 있어도 브라우저가
+# 로딩 전부터 올바른 종횡비 공간을 미리 확보해준다.
+IMG_TAG_RE = re.compile(r'<img\b([^>]*?)src="([^"]+)"([^>]*?)/?>', re.IGNORECASE)
+_IMG_SIZE_CACHE: dict[str, tuple[int, int] | None] = {}
+
+
+def _read_png_size(data: bytes) -> tuple[int, int] | None:
+    if data[:8] != b"\x89PNG\r\n\x1a\n" or len(data) < 24:
+        return None
+    w, h = struct.unpack(">II", data[16:24])
+    return w, h
+
+
+def _read_gif_size(data: bytes) -> tuple[int, int] | None:
+    if data[:6] not in (b"GIF87a", b"GIF89a") or len(data) < 10:
+        return None
+    w, h = struct.unpack("<HH", data[6:10])
+    return w, h
+
+
+def _read_jpeg_size(data: bytes) -> tuple[int, int] | None:
+    if data[:2] != b"\xff\xd8":
+        return None
+    i, n = 2, len(data)
+    while i + 9 < n:
+        if data[i] != 0xFF:
+            i += 1
+            continue
+        marker = data[i + 1]
+        # SOF0/1/2/3/5/6/7/9/10/11/13/14/15 (SOF 마커, DHT/JPG 계열 제외)
+        if marker in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7,
+                      0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+            h, w = struct.unpack(">HH", data[i + 5:i + 9])
+            return w, h
+        if marker in (0xD8, 0xD9) or 0xD0 <= marker <= 0xD7:
+            i += 2
+            continue
+        seg_len = struct.unpack(">H", data[i + 2:i + 4])[0]
+        i += 2 + seg_len
+    return None
+
+
+def _get_image_size(rel_src: str) -> tuple[int, int] | None:
+    """dist 기준 상대경로(images/xxx.ext)의 실제 픽셀 크기를 읽는다. 실패 시 None."""
+    if rel_src in _IMG_SIZE_CACHE:
+        return _IMG_SIZE_CACHE[rel_src]
+    size: tuple[int, int] | None = None
+    if rel_src.startswith("images/"):
+        path = ROOT / rel_src
+        try:
+            data = path.read_bytes()
+            size = (_read_png_size(data) or _read_jpeg_size(data)
+                    or _read_gif_size(data))
+        except OSError:
+            size = None
+    _IMG_SIZE_CACHE[rel_src] = size
+    return size
+
+
+def add_image_dimensions(html: str) -> str:
+    """로컬 이미지 <img> 태그에 width/height를 주입해 로딩 중 레이아웃 시프트를 방지한다."""
+    def _inject(m: re.Match) -> str:
+        pre, src, post = m.group(1), m.group(2), m.group(3)
+        if "width=" in pre or "width=" in post:
+            return m.group(0)  # 이미 크기 지정된 이미지는 건너뜀
+        size = _get_image_size(src)
+        if not size:
+            return m.group(0)  # 크기를 못 읽으면(원격 URL 등) 원본 그대로 유지
+        w, h = size
+        return f'<img{pre}src="{src}"{post.rstrip()} width="{w}" height="{h}">'
+    return IMG_TAG_RE.sub(_inject, html)
+
+
 def read(path: pathlib.Path) -> str:
     return path.read_text(encoding="utf-8")
 
@@ -240,7 +316,8 @@ def main() -> int:
         html = HREF_ANCHOR_RE.sub(_href, html)
         html = INLINE_LINK_STYLE_RE.sub("", html)
         html = theme_inline_styles(html)
-        return rewrite_images(html)
+        html = rewrite_images(html)
+        return add_image_dimensions(html)
 
     template = read(TEMPLATES / "template.html")
     scripts = read(TEMPLATES / "_scripts.html")

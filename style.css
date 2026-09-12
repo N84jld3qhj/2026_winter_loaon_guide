@@ -1,35 +1,38 @@
 /* =====================================================================
-   로아온 가이드 — Lost Ark 2026 뉴비/복귀 가이드 디자인 시스템
-   토큰 기반. 모든 색은 CSS 변수 경유. sharp(<=2px). 전설 골드 강조 +
-   로스트아크 아이템 등급 색 체계.
+   로아온 가이드 — Lost Ark 2026 윈터 가이드 디자인 시스템
+   토큰 기반. 모든 색은 CSS 변수 경유. sharp(<=2px).
+   라이트 = 프로스트/아이스(낮의 아크라시아), 다크 = 오로라/극야(밤의 아크라시아).
+   로스트아크 아이템 등급 색 체계는 테마와 무관하게 게임 기준을 유지.
    ===================================================================== */
 
 /* ---------- 1. 토큰 : 라이트(:root) / 다크(html[data-theme=dark]) ---------- */
 :root {
-    /* color — light (Lost Ark: 쿨다크 게임 패널의 라이트 대응, 전설 골드 강조) */
-    --bg: #F5F6F8;
+    /* color — light: 프로스트/아이스 (서리 낀 화이트 + 시안 포인트) */
+    --bg: #F1F8FA;
     --surface: #FFFFFF;
-    --surface-2: #EBEEF2;
-    --border: #D5DBE3;
-    --text: #141A22;
-    --text-muted: #5A6573;
-    --accent: #C07A12;
-    /* 전설 골드 (라이트: 진한 골드로 대비) */
-    --accent-weak: #FBEFD8;
-    --accent-hover: #9C6309;
-    --focus-ring: #C07A12;
-    --figure-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+    --surface-2: #E4F3F6;
+    --border: #CFE8ED;
+    --text: #10242C;
+    --text-muted: #4C7A8C;
+    --accent: #0E7C90;
+    /* 시안 포인트 (흰 배경 대비 WCAG AA 확보) */
+    --accent-2: #2B6CB0;
+    /* 보조 포인트 (다크의 오로라 퍼플에 대응하는 라이트용 딥블루) */
+    --accent-weak: #DFF4F8;
+    --accent-hover: #0B6072;
+    --focus-ring: #0E7C90;
+    --figure-shadow: 0 1px 2px rgba(16, 36, 44, .08);
 
-    /* 로스트아크 아이템 등급 색 (라이트: 대비 확보) */
+    /* 로스트아크 아이템 등급 색 (게임 기준 유지, 라이트 배경 대비 확보) */
     --tier-common: #6B7280;
-    --tier-uncommon: #3E9E2E;
+    --tier-uncommon: #2F9E52;
     --tier-rare: #1577C2;
-    --tier-heroic: #8A3FD1;
-    --tier-legendary: #C07A12;
+    --tier-heroic: #7C3AED;
+    --tier-legendary: #C98A12;
     --tier-relic: #D24A1E;
     --tier-ancient: #9A8A52;
-    --tier-esther: #138C82;
-    --tier-weak: #EBEEF2;
+    --tier-esther: #0E8F84;
+    --tier-weak: #E4F3F6;
 
     /* type */
     --font-display: "Space Grotesk", system-ui, sans-serif;
@@ -68,30 +71,32 @@
 }
 
 html[data-theme="dark"] {
-    /* 로스트아크 게임 패널: 어두운 남청-회색 쿨다크 + 전설 골드 */
-    --bg: #0B0F14;
-    --surface: #141A22;
-    --surface-2: #1C2530;
-    --border: #2A3542;
-    --text: #E8ECF2;
-    --text-muted: #94A1B2;
-    --accent: #F2A93B;
-    /* 전설 골드 */
-    --accent-weak: #2A2113;
-    --accent-hover: #FFC25E;
-    --focus-ring: #F2A93B;
-    --figure-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+    /* color — dark: 오로라/극야 (거의 검정에 가까운 남청 + 오로라 틸/퍼플) */
+    --bg: #0A0E1A;
+    --surface: #121826;
+    --surface-2: #1B2333;
+    --border: #2A3548;
+    --text: #E7ECF5;
+    --text-muted: #93A3BE;
+    --accent: #5EEAD4;
+    /* 오로라 틸 (주 포인트) */
+    --accent-2: #9F7AEA;
+    /* 오로라 퍼플 (보조 포인트 — mark 등 일부 요소에서만 사용) */
+    --accent-weak: #15304A;
+    --accent-hover: #99F6E4;
+    --focus-ring: #5EEAD4;
+    --figure-shadow: 0 1px 2px rgba(0, 0, 0, .5);
 
-    /* 로스트아크 아이템 등급 색 (다크) */
-    --tier-common: #B6BEC9;
-    --tier-uncommon: #5FD24A;
-    --tier-rare: #33B5FF;
-    --tier-heroic: #B775FF;
-    --tier-legendary: #F2A93B;
-    --tier-relic: #FA6A3C;
+    /* 로스트아크 아이템 등급 색 (게임 기준 유지, 다크 배경에서 더 밝고 선명하게) */
+    --tier-common: #A9B4C4;
+    --tier-uncommon: #6EE7A0;
+    --tier-rare: #60D0FF;
+    --tier-heroic: #C4A0FF;
+    --tier-legendary: #F2C14E;
+    --tier-relic: #FF8A5B;
     --tier-ancient: #E3D6A8;
-    --tier-esther: #3BD0C4;
-    --tier-weak: #1C2530;
+    --tier-esther: #35D0C0;
+    --tier-weak: #1B2333;
 }
 
 /* ---------- 2. base reset ---------- */
@@ -122,6 +127,7 @@ body {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -362,14 +368,16 @@ html[data-theme="dark"] .theme-ico--sun {
 
 .spine-row.active {
     color: var(--text);
+    /* 공통 accent 대신 해당 섹션의 등급색을 옅게 배경에 반영 (color-mix 미지원 브라우저는 accent-weak로 폴백) */
     background: var(--accent-weak);
-    border-left-color: var(--accent);
+    background: color-mix(in srgb, var(--tier, var(--accent)) 14%, var(--surface));
+    border-left-color: var(--tier, var(--accent));
     font-weight: 600;
 }
 
 .spine-row.active .spine-badge {
-    background: var(--accent);
-    border-left-color: var(--accent);
+    background: var(--tier, var(--accent));
+    border-left-color: var(--tier, var(--accent));
     color: var(--bg);
 }
 
@@ -445,7 +453,7 @@ h2,
     margin: 0 0 var(--sp-4); 
     
     padding: 0 0 0 var(--sp-3); /* 좌측 패딩 유지 */
-    border-left: 4px solid var(--accent); /* 좌측 골드 막대 유지 */
+    border-left: 4px solid var(--accent); /* 좌측 accent 막대 유지 */
     border-bottom: none;
     scroll-margin-top: calc(var(--topbar-h) + 8px);
 }
@@ -480,7 +488,7 @@ h4::before,
     width: 5px;
     height: 5px;
     background: var(--accent);
-    border-radius: 50%; /* 동그란 골드 닷 */
+    border-radius: 50%; /* 동그란 accent 닷 */
 }
 
 .content p {
@@ -661,7 +669,7 @@ code,
     transition: all 0.15s ease;
 }
 
-/* Hover 시에만 왼쪽 골드 포인트 바 활성화 */
+/* Hover 시에만 왼쪽 accent 포인트 바 활성화 */
 .page-toc-link:hover {
     color: var(--text);
     background: var(--accent-weak);
@@ -883,13 +891,17 @@ code,
     background: rgba(0, 0, 0, .5);
 }
 
-/*아크라시아 투어 강조 표시*/
+/*아크라시아 투어 강조 표시 — 형광펜처럼 확실히 눈에 띄도록 accent를 배경색으로, 텍스트는 반전 */
 mark {
-    background: var(--accent-weak); /* 골드 계열 은은한 배경색 */
-    color: var(--text);          /* 강조 글자색 */
+    background: var(--accent);
+    color: var(--surface); /* 라이트: 흰 텍스트 (accent가 어두운 톤이라 대비 확보) */
     padding: 0 4px;
     border-radius: var(--r-chip);
     font-weight: 600;
+}
+
+html[data-theme="dark"] mark {
+    color: var(--bg); /* 다크: accent(밝은 오로라 틸) 위에 어두운 텍스트로 반전 */
 }
 
 /* 공통 랜덤 캐릭터 배너 박스 */
@@ -952,7 +964,7 @@ mark {
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
-  border-radius: var(--r-card, 8px);
+  border-radius: var(--r-frame);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   cursor: default;
 }
@@ -1015,9 +1027,9 @@ ol.rank-list li {
     align-items: center;
     padding: var(--sp-3) var(--sp-4);
     margin-bottom: var(--sp-2);
-    background: var(--bg-surface, #f8fafc);
-    border: 1px solid var(--border, #e2e8f0);
-    border-radius: 8px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-frame);
     font-size: 0.95rem;
     transition: transform 0.15s ease, border-color 0.15s ease;
 }
@@ -1036,18 +1048,18 @@ ol.rank-list li::before {
     width: 24px;
     height: 24px;
     margin-right: var(--sp-3);
-    background: var(--border, #cbd5e1);
-    color: #fff;
+    background: var(--text-muted);
+    color: var(--bg);
     font-weight: 700;
     font-size: 0.8rem;
     border-radius: 50%;
     flex-shrink: 0;
 }
 
-/* 상위 1~3위 강조 */
-ol.rank-list li:nth-child(1)::before { background: #f59e0b; } /* 1위: 골드 */
-ol.rank-list li:nth-child(2)::before { background: #94a3b8; } /* 2위: 실버 */
-ol.rank-list li:nth-child(3)::before { background: #b45309; } /* 3위: 브론즈 */
+/* 상위 1~3위 강조 (등급색 재사용: 1위=전설(금빛), 2위=일반, 3위=고대) */
+ol.rank-list li:nth-child(1)::before { background: var(--tier-legendary); color: var(--bg); }
+ol.rank-list li:nth-child(2)::before { background: var(--tier-common); color: var(--bg); }
+ol.rank-list li:nth-child(3)::before { background: var(--tier-ancient); color: var(--bg); }
 
 /* ==========================================
    마크다운 인용구 & 콜아웃 통합 (blockquote)
@@ -1056,7 +1068,7 @@ blockquote {
     margin: var(--sp-3) 0;
     padding: var(--sp-1) var(--sp-2); /* --sp-3 -> --sp-2 로 변경 (또는 8px 16px) */
     background: var(--surface-2);
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid var(--accent);
     border-radius: 0 var(--r-chip) var(--r-chip) 0;
     color: var(--text);
     font-size: 0.95rem;
@@ -1072,20 +1084,20 @@ blockquote > * + * {
     margin-top: var(--sp-2);
 }
 
-/* 특수 콜아웃 바리에이션 (필요 시 클래스 추가용) */
+/* 특수 콜아웃 바리에이션 (필요 시 클래스 추가용) — 등급색 토큰 재사용 */
 blockquote.tip {
-    border-left-color: #f59e0b;
-    background: rgba(245, 158, 11, 0.08);
+    border-left-color: var(--tier-legendary);
+    background: color-mix(in srgb, var(--tier-legendary) 10%, var(--surface-2));
 }
 
 blockquote.info {
-    border-left-color: #3b82f6;
-    background: rgba(59, 130, 246, 0.08);
+    border-left-color: var(--tier-rare);
+    background: color-mix(in srgb, var(--tier-rare) 10%, var(--surface-2));
 }
 
 blockquote.note {
-    border-left-color: #64748b;
-    background: rgba(100, 116, 139, 0.08);
+    border-left-color: var(--tier-common);
+    background: color-mix(in srgb, var(--tier-common) 10%, var(--surface-2));
 }
 
 /* ==========================================
@@ -1100,17 +1112,17 @@ blockquote.note {
 
 .attack-card {
     padding: var(--sp-4);
-    border-radius: 8px;
-    background: var(--bg-surface, #f8fafc);
-    border: 1px solid var(--border, #e2e8f0);
+    border-radius: var(--r-frame);
+    background: var(--surface);
+    border: 1px solid var(--border);
 }
 
 .attack-card.back {
-    border-top: 3px solid #3b82f6; /* 파란색 포인트 */
+    border-top: 3px solid var(--tier-rare); /* 파란 계열 포인트 (등급색 재사용) */
 }
 
 .attack-card.head {
-    border-top: 3px solid #ef4444; /* 빨간색 포인트 */
+    border-top: 3px solid var(--tier-relic); /* 붉은 계열 포인트 (등급색 재사용) */
 }
 
 .attack-header {
@@ -1251,6 +1263,16 @@ details img {
 
     .rail-right {
         grid-column: 1;
+    }
+
+    /* 하단 고정 UI: 모바일에서는 날짜 숨기고 버튼만 남겨 본문 침범 최소화 */
+    .fixed-bottom-ui {
+        right: var(--sp-3);
+        bottom: var(--sp-3);
+    }
+
+    .fixed-bottom-ui .update-date {
+        display: none;
     }
 }
 
