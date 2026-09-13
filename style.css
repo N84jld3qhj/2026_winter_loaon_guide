@@ -16,8 +16,6 @@
     --text-muted: #4C7A8C;
     --accent: #0E7C90;
     /* 시안 포인트 (흰 배경 대비 WCAG AA 확보) */
-    --accent-2: #2B6CB0;
-    /* 보조 포인트 (다크의 오로라 퍼플에 대응하는 라이트용 딥블루) */
     --accent-weak: #DFF4F8;
     --accent-hover: #0B6072;
     --focus-ring: #0E7C90;
@@ -32,7 +30,6 @@
     --tier-relic: #D24A1E;
     --tier-ancient: #9A8A52;
     --tier-esther: #0E8F84;
-    --tier-weak: #E4F3F6;
 
     /* type */
     --font-display: "Space Grotesk", system-ui, sans-serif;
@@ -61,7 +58,6 @@
     /* radius (sharp) */
     --r-chip: 2px;
     --r-frame: 2px;
-    --r-zero: 0;
 
     /* layout */
     --topbar-h: 56px;
@@ -80,8 +76,6 @@ html[data-theme="dark"] {
     --text-muted: #93A3BE;
     --accent: #5EEAD4;
     /* 오로라 틸 (주 포인트) */
-    --accent-2: #9F7AEA;
-    /* 오로라 퍼플 (보조 포인트 — mark 등 일부 요소에서만 사용) */
     --accent-weak: #15304A;
     --accent-hover: #99F6E4;
     --focus-ring: #5EEAD4;
@@ -96,7 +90,6 @@ html[data-theme="dark"] {
     --tier-relic: #FF8A5B;
     --tier-ancient: #E3D6A8;
     --tier-esther: #35D0C0;
-    --tier-weak: #1B2333;
 }
 
 /* ---------- 2. base reset ---------- */
@@ -111,6 +104,7 @@ html[data-theme="dark"] {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: calc(var(--topbar-h) + 8px);
+    background: var(--bg); /* body 배경이 canvas로 승격되며 생기는 렌더링 문제 예방용 안전장치 */
 }
 
 body {
@@ -123,6 +117,7 @@ body {
     -webkit-font-smoothing: antialiased;
     transition: background-color .15s ease, color .15s ease;
 }
+
 
 img {
     display: block;
@@ -138,6 +133,39 @@ a {
 a:hover {
     color: var(--accent-hover);
     text-decoration: underline;
+}
+
+/* 본문(카드) 안의 일반 링크는 색만으로는 눈에 잘 안 띄므로,
+   굵은 글씨 + 두꺼운 밑줄로 "이건 링크다"를 반사적으로 알 수 있게 한다.
+   배경은 hover 시에만 살짝 얹어서 과하지 않게 유지.
+   좌/우 목차, 스파인 등 이미 자체 스타일을 가진 링크는 각자 클래스의
+   specificity가 더 높아 영향받지 않는다. */
+main.main-content a {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--accent);
+    border-radius: var(--r-chip);
+    padding: 0 2px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+/* 외부 링크(http로 시작)에는 화살표를 붙여 "새 사이트로 이동"임을 구분 */
+main.main-content a[href^="http"]::after {
+    content: " ↗";
+    font-weight: 700;
+}
+
+main.main-content a:hover {
+    background: var(--accent);
+    color: var(--surface); /* 라이트: accent가 어두운 톤이라 흰 텍스트로 반전 */
+    text-decoration-color: var(--surface);
+}
+
+html[data-theme="dark"] main.main-content a:hover {
+    color: #FFFFFF;
+    text-decoration-color: #FFFFFF;
 }
 
 :focus-visible {
@@ -298,6 +326,8 @@ html[data-theme="dark"] .theme-ico--sun {
     gap: var(--sp-8);
     padding: 0 var(--sp-5);
     align-items: start;
+    position: relative;
+    z-index: 1;
 }
 
 /* 랜딩은 우측 페이지 목차가 없지만, 본문 컬럼 위치가 섹션 페이지와 동일하도록
@@ -319,8 +349,18 @@ html[data-theme="dark"] .theme-ico--sun {
     display: flex;
     flex-direction: column;
     gap: var(--sp-4);
-    border-right: 1px solid var(--border);
-    padding-right: var(--sp-4);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-frame);
+    padding: var(--sp-4);
+}
+
+/* 우측 페이지 목차도 동일한 패널 톤으로 — 좌우 여백과 목차 영역이 뚜렷하게 구분되도록 */
+.rail-right {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--r-frame);
+    padding: var(--sp-4);
 }
 
 .spine {
@@ -679,6 +719,7 @@ code,
 
 .page-toc-link.active {
     color: var(--accent);
+    background: var(--accent-weak);
     border-left-color: var(--accent);
     font-weight: 600;
 }
@@ -912,7 +953,7 @@ html[data-theme="dark"] mark {
     flex-wrap: wrap; /* 화면이 좁아지면 자연스럽게 다음 줄로 넘어감 */
     background: var(--surface-2);
     border: 1px solid var(--border);
-    border-radius: var(--r-card);
+    border-radius: var(--r-frame);
     padding: var(--sp-4) var(--sp-2) var(--sp-2);
     margin: var(--sp-4) 0;
     gap: var(--sp-3);

@@ -52,7 +52,7 @@
             }
 
             /* ---- 우측 페이지 목차 h2 스크롤스파이 + breadcrumb ---- */
-            var headings = Array.prototype.slice.call(document.querySelectorAll('main.main-content .sub-title'));
+            var headings = Array.prototype.slice.call(document.querySelectorAll('main.main-content h2[id]'));
             var tocLinks = Array.prototype.slice.call(document.querySelectorAll('.page-toc-link'));
             var crumbCurrent = document.querySelector('.breadcrumb .crumb-current');
             var crumbSep = document.querySelector('.breadcrumb .crumb-sep');
