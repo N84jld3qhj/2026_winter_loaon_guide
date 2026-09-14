@@ -153,7 +153,7 @@ main.main-content a {
 
 /* 외부 링크(http로 시작)에는 화살표를 붙여 "새 사이트로 이동"임을 구분 */
 main.main-content a[href^="http"]::after {
-    content: " ↗";
+    content: "";
     font-weight: 700;
 }
 

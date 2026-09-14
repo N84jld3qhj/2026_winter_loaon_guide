@@ -117,8 +117,8 @@
 
 그 재료들을 포기하고 순위권 경쟁을 위해 천상 입장권을 선택하는건 뉴비/복귀 유저가 하기에는 어려운 선택입니다.
 
-![이미지 200](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0200.png){.half-size}
-![이미지 201](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0201.png){.half-size}
+![이미지 200](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0200.png)
+![이미지 201](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0201.png)
 
 원정대 입장권은 부캐릭터들의 복원석을 원정대 공유 천상 입장권으로 바꿔 본캐릭터에 몰아주는 방식인데 낙원은 1640만 되면 입장이 가능하고 아이템 레벨에 상관없이 복원석 획득량이 모두 동일하기 때문에 원정대에 최대한 많은 1640 캐릭터를 만들어 입장권을 몰아줘야 합니다.
 
@@ -188,9 +188,3 @@
 부활 횟수를 모두 소진한 상태에서 사망하는 경우 보상 기회가 소멸됩니다.
 
 '중단하고 보상 받기' 버튼을 선택하면, 해당 층에 해당하는 보상 상자가 등장하며 나락이 종료됩니다.
-
-## 종언의 잔영
-
-![이미지 271](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0271.png)
-
-
