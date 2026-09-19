@@ -15,6 +15,33 @@
             } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
         })();
     </script>
+    <script>
+    (function () {
+        try {
+            var bgEnabled = localStorage.getItem('bgImageEnabled') !== '0';
+            if (!bgEnabled) document.documentElement.classList.add('bg-hidden');
+            var imgs = {{BG_IMAGES}};
+            if (!imgs || !imgs.length) return;
+            var key = 'bgImage';
+
+            // 새로고침인지 판별 (Navigation Timing API, 구형 브라우저는 legacy API로 폴백)
+            var navType = 'navigate';
+            var entries = performance.getEntriesByType && performance.getEntriesByType('navigation');
+            if (entries && entries.length) {
+                navType = entries[0].type; // 'navigate' | 'reload' | 'back_forward'
+            } else if (performance.navigation) {
+                navType = performance.navigation.type === 1 ? 'reload' : 'navigate';
+            }
+
+            var chosen = navType === 'reload' ? null : sessionStorage.getItem(key);
+            if (!chosen || imgs.indexOf(chosen) === -1) {
+                chosen = imgs[Math.floor(Math.random() * imgs.length)];
+            }
+            sessionStorage.setItem(key, chosen);
+            document.documentElement.style.setProperty('--page-bg-image', 'url("' + chosen + '")');
+        } catch (e) { /* 조용히 무시 — 기본 배경색으로 폴백 */ }
+    })();
+</script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -39,6 +66,7 @@
             <span class="theme-ico theme-ico--sun" aria-hidden="true">☀</span>
             <span class="theme-ico theme-ico--moon" aria-hidden="true">☾</span>
         </button>
+        <button class="theme-toggle" id="bgToggle" aria-label="배경 이미지 켜기/끄기" title="배경 이미지 켜기/끄기 (테스트용)">🖼</button>
     </header>
     <div class="topbar-spacer" aria-hidden="true"></div>
     <div class="scrim" id="drawerScrim" hidden></div>

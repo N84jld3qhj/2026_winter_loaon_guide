@@ -119,7 +119,7 @@ body {
     background-repeat: no-repeat;
     /* 배경색과 사진을 섞어서 사진 톤이 테마(라이트/다크)에 자연스럽게
        맞춰지게 함 — 별도 오버레이 요소 없이 body 배경 레이어만으로 처리 */
-    background-blend-mode: overlay;
+    /* background-blend-mode: overlay; */
     color: var(--text);
     font-family: var(--font-body);
     font-size: var(--fs-body);
@@ -129,6 +129,10 @@ body {
     transition: background-color .15s ease, color .15s ease;
 }
 
+/*배경화면 온오프*/
+html.bg-hidden body {
+    background-image: none;
+}
 
 img {
     display: block;
