@@ -373,9 +373,11 @@ def main() -> int:
             m_id = ATTR_ID_RE.search(attrs)
             hid = m_id.group(1) if m_id else f"sec-{n}"
             return (
+                '<div class="card">'
                 '<div class="chapter-head">'
                 f'<span class="chapter-chip" aria-hidden="true">{n:02d}</span>'
                 f'<h1 class="main-title" id="{hid}">{text}</h1>'
+                '</div>'
                 '</div>'
             )
         return MAIN_TITLE_RE.sub(_wrap, html, count=1)

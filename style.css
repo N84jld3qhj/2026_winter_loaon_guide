@@ -108,7 +108,18 @@ html {
 }
 
 body {
-    background: var(--bg);
+    background-color: var(--bg);
+    /* JS(head 인라인 스크립트)가 --page-bg-image를 세팅해줌. 값이 없으면
+       기본 var(--bg) 색만 보임 — images/ZONE/ 폴더가 비어있어도
+       안전하게 동작 */
+    background-image: var(--page-bg-image, none);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* 배경색과 사진을 섞어서 사진 톤이 테마(라이트/다크)에 자연스럽게
+       맞춰지게 함 — 별도 오버레이 요소 없이 body 배경 레이어만으로 처리 */
+    background-blend-mode: overlay;
     color: var(--text);
     font-family: var(--font-body);
     font-size: var(--fs-body);
@@ -151,12 +162,6 @@ main.main-content a {
     transition: background 0.15s ease, color 0.15s ease;
 }
 
-/* 외부 링크(http로 시작)에는 화살표를 붙여 "새 사이트로 이동"임을 구분 */
-main.main-content a[href^="http"]::after {
-    content: "";
-    font-weight: 700;
-}
-
 main.main-content a:hover {
     background: var(--accent);
     color: var(--surface); /* 라이트: accent가 어두운 톤이라 흰 텍스트로 반전 */
@@ -187,7 +192,13 @@ html[data-theme="dark"] main.main-content a:hover {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
 }
-
+.topbar-spacer {
+    position: sticky;
+    top: var(--topbar-h);
+    height: var(--sp-8);
+    background: var(--bg);
+    z-index: 40;
+}
 .wordmark {
     display: flex;
     align-items: baseline;
@@ -338,12 +349,11 @@ html[data-theme="dark"] .theme-ico--sun {
 
 .rail {
     position: sticky;
-    top: var(--topbar-h);
-    max-height: calc(100vh - var(--topbar-h));
+    top: calc(var(--topbar-h) + var(--sp-8));
+    max-height: calc(100vh - var(--topbar-h) - var(--sp-8));
     overflow-y: auto;
     padding: var(--sp-6) 0;
 }
-
 /* ---------- 5. 좌측 스파인 (시그니처) ---------- */
 .rail-left {
     display: flex;
@@ -357,12 +367,14 @@ html[data-theme="dark"] .theme-ico--sun {
 
 /* 우측 페이지 목차도 동일한 패널 톤으로 — 좌우 여백과 목차 영역이 뚜렷하게 구분되도록 */
 .rail-right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--r-frame);
     padding: var(--sp-4);
 }
-
 .spine {
     display: flex;
     flex-direction: column;
@@ -438,7 +450,7 @@ html[data-theme="dark"] .theme-ico--sun {
 /* ---------- 6. 본문 ---------- */
 .content {
     min-width: 0;
-    padding: var(--sp-8) 0 var(--sp-12);
+    padding: 0 0 var(--sp-12);
 }
 
 .section-container {
@@ -548,6 +560,15 @@ h4::before,
     border-radius: var(--r-chip);
     padding: var(--sp-6);
     margin: var(--sp-5) 0;
+}
+
+/* 본문 영역의 첫 카드(h1 챕터 헤드)는 위쪽 여백을 없애고, 안쪽 패딩도
+   사이드바(--sp-4)와 맞춰서 콘텐츠 시작 위치 자체를 정렬한다 — 안 그러면
+   카드의 기본 padding(--sp-6)이 사이드바 padding(--sp-4)보다 커서
+   본문 시작점이 사이드바보다 살짝 아래로 처짐 */
+main.main-content > .card:first-child {
+    margin-top: 0;
+    padding-top: var(--sp-4);
 }
 
 .card>img,
@@ -1293,7 +1314,7 @@ details img {
         max-height: 100vh;
         background: var(--surface);
         border-right: 1px solid var(--border);
-        padding: var(--sp-6) var(--sp-4);
+        padding: var(--sp-12) var(--sp-4) var(--sp-4);
         transform: translateX(-100%);
         transition: transform .18s ease-out;
     }
