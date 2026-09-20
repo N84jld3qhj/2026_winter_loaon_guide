@@ -6,6 +6,16 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>{{TITLE}}</title>
     <!-- no-flash theme: MUST run before stylesheet so dark readers never see a white flash on navigation -->
+     <!-- 파비콘: 이미지 파일 없이 SVG로 닻 이모지 렌더링 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚓</text></svg>">
+
+    <!-- 링크 공유 미리보기 (카카오톡/디스코드/트위터 등) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{TITLE}}" />
+    <meta property="og:description" content="로스트아크 뉴비·복귀 유저를 위한 2026 윈터 가이드" />
+    <meta property="og:image" content="https://github.com/N84jld3qhj/2026_winter_loaon_guide/images/og-image.png" />
+    <meta property="og:url" content="https://github.com/N84jld3qhj/2026_winter_loaon_guide" />
+    <meta name="twitter:card" content="summary_large_image" />
     <script>
         (function () {
             try {
@@ -58,9 +68,6 @@
         <a class="wordmark" href="index.html">
             <span class="wordmark-mark">로아온 가이드</span><span class="wordmark-sub">2026 윈터</span>
         </a>
-        <button class="search-trigger search-trigger--bar" data-search-open aria-label="검색 열기">
-            <span class="search-ico" aria-hidden="true">🔍</span><span class="search-label">검색</span><kbd class="search-kbd">⌘K</kbd>
-        </button>
         <nav class="breadcrumb" aria-label="현재 위치">{{BREADCRUMB}}</nav>
         <button class="theme-toggle" id="themeToggle" aria-label="라이트/다크 테마 전환">
             <span class="theme-ico theme-ico--sun" aria-hidden="true">☀</span>
@@ -87,11 +94,6 @@
         <main class="content main-content" id="content">
             {{CONTENT}}
         </main>
-
-        <!-- Zone B: 이 페이지 h2 목차 (우) -->
-        <aside class="rail rail-right" id="railRight" aria-label="이 페이지 목차">
-            {{PAGEINDEX}}
-        </aside>
     </div>
 
     <!-- ⌘K 커맨드 팔레트 -->

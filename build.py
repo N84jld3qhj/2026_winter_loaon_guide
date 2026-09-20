@@ -344,26 +344,24 @@ def main() -> int:
             n = section_num(pid)
             badge = f"{n:02d}"
             tier = SPINE_TIERS[i % len(SPINE_TIERS)]
-            cls = "spine-row active" if active == pid else "spine-row"
-            rows.append(
+            is_active = active == pid
+            cls = "spine-row active" if is_active else "spine-row"
+            row = (
                 f'<a class="{cls}" href="{fname}" style="--tier: var(--tier-{tier})">'
                 f'<span class="spine-badge">{badge}</span>'
                 f'<span class="spine-label">{short_label(label)}</span></a>'
             )
+            sub = ""
+            if is_active:
+                h2s = [(slug, lbl) for level, slug, lbl in index_by_id.get(pid, []) if level == "h2"]
+                if h2s:
+                    links = "".join(
+                        f'<a class="page-toc-link" href="#{slug}">{lbl}</a>'
+                        for slug, lbl in h2s
+                    )
+                    sub = f'<div class="spine-subitems">{links}</div>'
+            rows.append(f'<div class="spine-item">{row}{sub}</div>')
         return "\n                ".join(rows)
-
-    def pageindex(pid: str) -> str:
-        h2s = [(slug, label) for level, slug, label in index_by_id.get(pid, []) if level == "h2"]
-        if not h2s:
-            return ""
-        items = ['<details class="page-toc" id="pageToc" open>',
-                 '<summary class="page-toc-summary">이 페이지 목차</summary>',
-                 '<ul>']
-        for slug, label in h2s:
-            items.append(f'<li><a class="page-toc-link" href="#{slug}">{label}</a></li>')
-        items.append('</ul>')
-        items.append('</details>')
-        return "\n                ".join(items)
 
     def breadcrumb(pid: str) -> str:
         n = section_num(pid)
@@ -387,11 +385,9 @@ def main() -> int:
             m_id = ATTR_ID_RE.search(attrs)
             hid = m_id.group(1) if m_id else f"sec-{n}"
             return (
-                '<div class="card">'
                 '<div class="chapter-head">'
                 f'<span class="chapter-chip" aria-hidden="true">{n:02d}</span>'
                 f'<h1 class="main-title" id="{hid}">{text}</h1>'
-                '</div>'
                 '</div>'
             )
         return MAIN_TITLE_RE.sub(_wrap, html, count=1)
@@ -403,7 +399,6 @@ def main() -> int:
         page = page.replace("{{BG_IMAGES}}", bg_images_json)
         page = page.replace("{{BREADCRUMB}}", breadcrumb(active))
         page = page.replace("{{SPINE}}", spine(active))
-        page = page.replace("{{PAGEINDEX}}", pageindex(active) if kind == "section" else "")
         page = page.replace("{{CONTENT}}", content)
         page = page.replace("{{SCRIPTS}}", scripts)
         return page

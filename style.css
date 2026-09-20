@@ -62,7 +62,6 @@
     /* layout */
     --topbar-h: 56px;
     --rail-left-w: 280px;
-    --rail-right-w: 220px;
     --content-w: 45rem;
 }
 
@@ -105,6 +104,25 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: calc(var(--topbar-h) + 8px);
     background: var(--bg); /* body 배경이 canvas로 승격되며 생기는 렌더링 문제 예방용 안전장치 */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--border) transparent; /* Firefox: thumb track */
+}
+
+html::-webkit-scrollbar {
+    width: 6px;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: var(--r-chip);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
 }
 
 body {
@@ -195,6 +213,7 @@ html[data-theme="dark"] main.main-content a:hover {
     padding: 0 var(--sp-5);
     background: var(--surface);
     border-bottom: 1px solid var(--border);
+        box-shadow: 0 1px 0 var(--border);
 }
 .topbar-spacer {
     position: sticky;
@@ -336,7 +355,7 @@ html[data-theme="dark"] .theme-ico--sun {
 /* ---------- 4. 레이아웃 3존 ---------- */
 .layout {
     display: grid;
-    grid-template-columns: var(--rail-left-w) minmax(0, var(--content-w)) var(--rail-right-w);
+    grid-template-columns: var(--rail-left-w) minmax(0, var(--content-w));
     justify-content: center;
     gap: var(--sp-8);
     padding: 0 var(--sp-5);
@@ -345,32 +364,34 @@ html[data-theme="dark"] .theme-ico--sun {
     z-index: 1;
 }
 
-/* 랜딩은 우측 페이지 목차가 없지만, 본문 컬럼 위치가 섹션 페이지와 동일하도록
-   3컬럼 그리드를 그대로 쓰고 우측 칸을 빈 채로 예약한다(레이아웃 점프 방지). */
-.layout-landing .rail-right {
-    visibility: hidden;
-}
-
 .rail {
     position: sticky;
     top: calc(var(--topbar-h) + var(--sp-8));
     max-height: calc(100vh - var(--topbar-h) - var(--sp-8));
     overflow-y: auto;
     padding: var(--sp-6) 0;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--border) transparent; /* Firefox: thumb track */
+}
+
+.rail::-webkit-scrollbar {
+    width: 6px;
+}
+
+.rail::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.rail::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: var(--r-chip);
+}
+
+.rail::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
 }
 /* ---------- 5. 좌측 스파인 (시그니처) ---------- */
 .rail-left {
-    display: flex;
-    flex-direction: column;
-    gap: var(--sp-4);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--r-frame);
-    padding: var(--sp-4);
-}
-
-/* 우측 페이지 목차도 동일한 패널 톤으로 — 좌우 여백과 목차 영역이 뚜렷하게 구분되도록 */
-.rail-right {
     display: flex;
     flex-direction: column;
     gap: var(--sp-4);
@@ -435,6 +456,23 @@ html[data-theme="dark"] .theme-ico--sun {
     background: var(--tier, var(--accent));
     border-left-color: var(--tier, var(--accent));
     color: var(--bg);
+}
+
+/* 활성 섹션의 h2 하위 목차를 그 바로 아래에 들여쓰기로 펼침 (아코디언).
+   비활성 섹션은 한 줄만 차지해서, 페이지마다 하위 항목 개수가 달라도
+   공간을 고정으로 미리 떼어놓지 않아도 된다. */
+.spine-subitems {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding-left: var(--sp-8);
+    margin: 2px 0 var(--sp-2);
+}
+
+.spine-subitems .page-toc-link {
+    padding: 6px var(--sp-2);
+    font-size: 0.8125rem;
+    font-weight: 500;
 }
 
 /* 진행률 채움 (스파인 하단) */
@@ -684,43 +722,7 @@ code,
     color: var(--tier-esther);
 }
 
-/* ---------- 8. 우측 페이지 목차 (h2-only) ---------- */
-/* 이 페이지 목차 컨테이너 */
-.page-toc {
-    margin-top: var(--sp-4);
-    padding: 0;
-    background: transparent;
-    border: none;
-}
-
-/* 요약 헤더 '이 페이지 목차' */
-.page-toc-summary {
-    font-size: 0.8125rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    user-select: none;
-    padding: var(--sp-2) var(--sp-2);
-    margin-bottom: var(--sp-2);
-    border-bottom: 1px solid var(--border);
-    list-style: none;
-}
-
-.page-toc-summary::-webkit-details-marker {
-    display: none;
-}
-
-/* 리스트 컨테이너 */
-.page-toc ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
+/* ---------- 8. 페이지 하위 목차 링크 (좌측 스파인 아코디언 안에서 사용) ---------- */
 /* 텍스트 위주의 깔끔한 링크 버튼 */
 .page-toc-link {
     display: block;
@@ -1259,38 +1261,10 @@ details img {
 }
 
 /* ---------- 12. 반응형 ---------- */
-/* 중간폭: 우측 레일을 본문 위 드롭다운으로 */
 @media (max-width: 1180px) {
-
     .layout,
     .layout-landing {
         grid-template-columns: var(--rail-left-w) minmax(0, 1fr);
-    }
-
-    .rail-right {
-        grid-column: 2;
-        grid-row: 1;
-        position: static;
-        max-height: none;
-        overflow: visible;
-        padding: var(--sp-4) 0 0;
-    }
-
-    .page-toc {
-        border: 1px solid var(--border);
-        border-radius: var(--r-chip);
-        background: var(--surface);
-        padding: var(--sp-2) var(--sp-4);
-    }
-
-    .page-toc-summary {
-        cursor: pointer;
-        margin: 0;
-        padding: var(--sp-1) 0;
-    }
-
-    .page-toc[open] .page-toc-summary {
-        margin-bottom: var(--sp-2);
     }
 }
 
@@ -1325,10 +1299,6 @@ details img {
 
     body.drawer-open .rail-left {
         transform: translateX(0);
-    }
-
-    .rail-right {
-        grid-column: 1;
     }
 
     /* 하단 고정 UI: 모바일에서는 날짜 숨기고 버튼만 남겨 본문 침범 최소화 */
