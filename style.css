@@ -60,7 +60,7 @@
     --r-frame: 2px;
 
     /* layout */
-    --rail-left-w: 370px;
+    --rail-left-w: 340px;
 }
 
 html[data-theme="dark"] {
@@ -357,7 +357,7 @@ html[data-theme="dark"] .theme-ico--sun {
 }
 
 /* ---------- 6. 본문 ---------- */
-.content {
+.contents {
     min-width: 0;
     padding: 0 0 var(--sp-12);
 }
@@ -452,12 +452,12 @@ h4::before,
     border-radius: 50%; /* 동그란 accent 닷 */
 }
 
-.content p {
+.contents p {
     margin: var(--sp-3) 0;
 }
 
-.content ul,
-.content ol {
+.contents ul,
+.contents ol {
     margin: var(--sp-3) 0;
     padding-left: var(--sp-6);
 }
@@ -475,7 +475,7 @@ h4::before,
    사이드바(--sp-4)와 맞춰서 콘텐츠 시작 위치 자체를 정렬한다 — 안 그러면
    카드의 기본 padding(--sp-6)이 사이드바 padding(--sp-4)보다 커서
    본문 시작점이 사이드바보다 살짝 아래로 처짐 */
-main.main-content > .card:first-child {
+main.main-contents > .card:first-child {
     margin-top: 0;
     padding-top: var(--sp-4);
 }
@@ -487,12 +487,11 @@ main.main-content > .card:first-child {
     border-radius: var(--r-frame);
     box-shadow: var(--figure-shadow);
     margin: var(--sp-3) 0;
-
 }
 
 .full-size {
     width: 100%;
-    max-width: 70%;
+    max-width: 90%;
 }
 
 .half-size {
@@ -621,44 +620,25 @@ code,
 }
 
 /* ---------- 9. 랜딩 목차 리스트 ---------- */
+/* 인트로 페이지 전체 목차 — 좌측 사이드바의 .spine-row/.spine-badge를
+   그대로 재사용해서 항상 같은 스타일을 유지한다 (따로 관리 안 해도 됨) */
 .landing-toc {
-    list-style: none;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
     margin: var(--sp-4) 0 0;
     border-top: 1px solid var(--border);
 }
 
-.landing-toc li {
+.landing-toc .spine-row {
     border-bottom: 1px solid var(--border);
+    padding: var(--sp-4) var(--sp-3);
+    font-size: 1.0625rem;
 }
 
-.landing-toc li a {
-    display: flex;
-    align-items: center;
-    gap: var(--sp-4);
-    padding: var(--sp-4) var(--sp-2);
-    color: var(--text);
-}
-
-.landing-toc li a:hover {
-    background: var(--surface-2);
-    text-decoration: none;
-    color: var(--accent);
-}
-
-.landing-badge {
-    flex: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 28px;
-    background: var(--surface-2);
-    border-radius: var(--r-chip);
-    color: var(--accent);
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 0.875rem;
+.landing-toc .spine-badge {
+    width: 42px;
+    height: 34px;
+    font-size: 1.125rem;
 }
 
 /* ---------- 10. ⌘K 검색 다이얼로그 ---------- */
@@ -922,7 +902,6 @@ html[data-theme="dark"] mark {
     align-items: start;                    /* 핵심: 높이를 강제로 맞추지 않고 각자 높이 유지 */
     margin: 0;
     padding: 0;
-    max-width: 60%;
 }
 
 .img-grid p img {

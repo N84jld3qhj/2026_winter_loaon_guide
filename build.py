@@ -271,7 +271,7 @@ def main() -> int:
     raw_by_id: dict[str, str] = {}
     index_by_id: dict[str, list[tuple[str, str, str]]] = {}
 
-    md_converter = markdown.Markdown(extensions=['md_in_html', 'attr_list', 'tables', 'fenced_code', 'toc'])
+    md_converter = markdown.Markdown(extensions=['md_in_html', 'attr_list', 'tables', 'fenced_code', 'toc', 'nl2br'])
     
     for pid, frag, fname in fragments:
         raw_text = read_fragment(frag, pid)
@@ -405,14 +405,16 @@ def main() -> int:
 
     cards = ['<div class="card"><div class="section-container">',
              '<h1 class="main-title">전체 목차</h1>',
-             '<ul class="landing-toc">']
-    for pid, fname, label, *_ in SECTIONS:
+             '<div class="landing-toc">']
+    for i, (pid, fname, label, *_) in enumerate(SECTIONS):
         n = section_num(pid)
+        tier = SPINE_TIERS[i % len(SPINE_TIERS)]
         cards.append(
-            f'<li><a href="{fname}"><span class="landing-badge">{n:02d}</span>'
-            f'<span>{short_label(label)}</span></a></li>'
+            f'<a class="spine-row" href="{fname}" style="--tier: var(--tier-{tier})">'
+            f'<span class="spine-badge">{n:02d}</span>'
+            f'<span class="spine-label">{short_label(label)}</span></a>'
         )
-    cards.append("</ul></div></div>")
+    cards.append("</div></div></div>")
     landing_content = finalize(raw_by_id["intro"]) + "\n            " + "\n            ".join(cards)
     (DIST / LANDING_FILE).write_text(
         render(LANDING_ID, SITE_TITLE, landing_content, "landing"), encoding="utf-8"
