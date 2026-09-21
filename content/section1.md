@@ -68,10 +68,10 @@
 
 <div class="img-grid" markdown="1">
 
-![이미지 273](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0273.png){.half-size}
-![이미지 274](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0274.png){.half-size}
-![이미지 275](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0275.png){.half-size}
-![이미지 276](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0276.png){.half-size}
+![이미지 273](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0273.png)
+![이미지 274](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0274.png)
+![이미지 275](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0275.png)
+![이미지 276](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0276.png)
 
 </div>
 
