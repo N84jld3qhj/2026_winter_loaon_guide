@@ -24,6 +24,7 @@ import shutil
 import struct
 import sys
 import markdown
+import datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent
 CONTENT = ROOT / "content"
@@ -334,6 +335,9 @@ def main() -> int:
 
     template = read(TEMPLATES / "template.html")
     scripts = read(TEMPLATES / "_scripts.html")
+    build_date = datetime.date.today().strftime("%Y. %m. %d")
+    scripts = scripts.replace("{{BUILD_DATE}}", build_date)
+
     bg_images_json = json.dumps(list_background_images(), ensure_ascii=False)
 
     DIST.mkdir(exist_ok=True)
@@ -426,9 +430,7 @@ def main() -> int:
             render(pid, f"{title} | {SITE_TITLE}", content, "section"), encoding="utf-8"
         )
 
-    # 404 페이지 — GitHub Pages가 저장소 루트의 404.html을 자동으로 인식해서 씀.
-    # 실제 게임 이미지 대신, 사이트 accent 색을 그대로 쓰는 SVG(닻이 파도에
-    # 떠내려가는 모양)를 그려서 테마 전환에도 자동으로 색이 맞게 했다.
+
     not_found_content = '''
 <div class="card">
 <div class="chapter-head">
@@ -437,15 +439,7 @@ def main() -> int:
 </div>
 </div>
 <div class="card" style="text-align:center; padding: var(--sp-12) var(--sp-6);">
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" aria-hidden="true" style="margin-bottom: var(--sp-6);">
-  <circle cx="100" cy="40" r="18" stroke="var(--accent)" stroke-width="6"/>
-  <line x1="100" y1="58" x2="100" y2="150" stroke="var(--accent)" stroke-width="6"/>
-  <line x1="65" y1="85" x2="135" y2="85" stroke="var(--accent)" stroke-width="6"/>
-  <path d="M 100 150 Q 40 150 40 100" stroke="var(--accent)" stroke-width="6" stroke-linecap="round"/>
-  <path d="M 100 150 Q 160 150 160 100" stroke="var(--accent)" stroke-width="6" stroke-linecap="round"/>
-  <path d="M 20 175 Q 45 165 70 175 T 120 175 T 170 175" stroke="var(--border)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M 10 190 Q 35 180 60 190 T 110 190 T 180 190" stroke="var(--border)" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
-</svg>
+<img src="images/404_NOT_FOUND.png" alt="" style="max-width: 100%; width: 100%; margin-bottom: var(--sp-6); border-radius: var(--r-frame);" />
 <p style="color: var(--text-muted); margin-bottom: var(--sp-6);">요청하신 페이지가 존재하지 않거나 다른 곳으로 이동했어요.</p>
 <a href="index.html">홈으로 돌아가기</a>
 </div>
