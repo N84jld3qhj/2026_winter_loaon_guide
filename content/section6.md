@@ -2,7 +2,7 @@
 
 <div class="card" markdown="1">
 
-![이미지 59](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0059.png)
+![이미지 59](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0059.png)  
 
 [➡️ 프로키온의 나침반](https://lostark.game.onstove.com/GameGuide/Pages/%ED%94%84%EB%A1%9C%ED%82%A4%EC%98%A8%EC%9D%98%20%EB%82%98%EC%B9%A8%EB%B0%98)
 
@@ -34,7 +34,7 @@
 
 원정대당 1회 보상 획득이 가능합니다.
 
-![이미지 62](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0062.png)
+![이미지 62](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0062.png){.half-size}
 
 보상으로 귀속 골드, 보석, 재련 재료(파편 주머니, 숨결), 전설 카드, 유물 각인서 등을 얻을 수 있으며 클리어 후 경매로 전설 카드나 젬을 입찰할 수 있습니다.
 

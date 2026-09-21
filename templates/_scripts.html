@@ -1,4 +1,4 @@
-    <!-- 하단 고정 UI: 맨 위로 + 최종 수정일 -->
+<!-- 하단 고정 UI: 맨 위로 + 최종 수정일 -->
     <div class="fixed-bottom-ui">
         <ul>
             <li>
@@ -24,23 +24,6 @@
                     try { localStorage.setItem('theme', next); } catch (e) { }
                 });
             }
-
-            /* ---- 모바일 드로어 ---- */
-            var drawerBtn = document.getElementById('drawerToggle');
-            var scrim = document.getElementById('drawerScrim');
-            function setDrawer(open) {
-                document.body.classList.toggle('drawer-open', open);
-                if (scrim) scrim.hidden = !open;
-                if (drawerBtn) drawerBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-            }
-            if (drawerBtn) drawerBtn.addEventListener('click', function () {
-                setDrawer(!document.body.classList.contains('drawer-open'));
-            });
-            if (scrim) scrim.addEventListener('click', function () { setDrawer(false); });
-            // 드로어 안의 섹션 링크 클릭 시 닫기
-            document.querySelectorAll('.rail-left a').forEach(function (a) {
-                a.addEventListener('click', function () { setDrawer(false); });
-            });
 
             /* ---- 진행률 바 (스파인 하단 채움) ---- */
             var progressBar = document.getElementById('progressBar');
@@ -232,12 +215,6 @@
         })();
     </script>
 
-    <script>
-        // 조회수 기록 (기존 동작 보존)
-        fetch('https://script.google.com/macros/s/AKfycbwSqARqOln42Iglcb_HzhlrUqcyaHrsGinaiyh-mplMjHTTGJxO-oR2znPItvYdkyV9/exec')
-            .then(function () { console.log('조회수 기록 성공'); })
-            .catch(function (e) { console.error('기록 실패', e); });
-    </script>
 
 <script>
         //배경화면 온오프
@@ -312,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 실행 (서포터 4개, 딜러 4개 추출)
     renderBanner("supporterbanner", supporters, 4);
-    renderBanner("dealerbanner", dealers, 10);
+    renderBanner("dealerbanner", dealers, 18);
 });
 </script>
 

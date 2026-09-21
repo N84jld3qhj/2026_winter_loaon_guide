@@ -56,6 +56,10 @@
 
 ![이미지 188](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0188.png)
 
+[➡️ 로아랩](https://lo4.app/tools/normal-refine) 강화 단계, 보유 재료를 입력하면 필요 재료, 예상 비용, 재련 최적화 방식 등을 시뮬레이션해줍니다.
+
+![이미지 284](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0284.png)
+
 [➡️ 로아갭](https://loagap.com/efficiency/enhance) 효율적인 재련 순서를 알려주는 사이트입니다. 재련은 특정 구간에서 상급재련과 효율이 역전되는 경우가 있는데 그걸 계산해서 최적의 재련 순서를 알려줍니다.
 
 ![이미지 173](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0173.png)
@@ -76,9 +80,19 @@
 
 ## 스킬 시뮬레이터
 
-[➡️ 로스트빌드](https://lostbuilds.com/) 캐릭터 스킬 분석 / 세팅 시뮬레이션 / DPS 비교 등 다양한 기능을 제공합니다. 아크 그리드 패치 이후 업데이트가 중단돼서 스킬별 딜량은 인게임 데이터와 달라 사용할 수 없지만 각인, 아크패시브, 장신구, 팔찌 등 장비 세팅은 시뮬레이션 가능합니다.
+캐릭터 스킬 분석 / 세팅 시뮬레이션 / DPS 비교 등 다양한 기능을 제공하는 사이트들입니다. 
 
-![이미지 176](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0176.png)
+[➡️ 로스트허브](https://losthub.cloud/) 
+
+![이미지 285](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0285.png)
+
+[➡️ 러스트빌드](https://lustbuilds.kr/) 
+
+![이미지 286](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0286.png)
+
+[➡️ 로아콩](https://loakong.com/) 
+
+![이미지 287](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0287.png)
 
 ## 아크 그리드
 

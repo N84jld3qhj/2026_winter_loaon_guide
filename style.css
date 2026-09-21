@@ -60,9 +60,7 @@
     --r-frame: 2px;
 
     /* layout */
-    --topbar-h: 56px;
-    --rail-left-w: 280px;
-    --content-w: 45rem;
+    --rail-left-w: 370px;
 }
 
 html[data-theme="dark"] {
@@ -102,7 +100,7 @@ html[data-theme="dark"] {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--topbar-h) + 8px);
+    scroll-padding-top: 8px;
     background: var(--bg); /* body 배경이 canvas로 승격되며 생기는 렌더링 문제 예방용 안전장치 */
     scrollbar-width: thin; /* Firefox */
     scrollbar-color: var(--border) transparent; /* Firefox: thumb track */
@@ -154,7 +152,7 @@ html.bg-hidden body {
 
 img {
     display: block;
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
 }
 
@@ -201,74 +199,6 @@ html[data-theme="dark"] main.main-content a:hover {
     border-radius: var(--r-chip);
 }
 
-/* ---------- 3. 상단바 ---------- */
-.topbar {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    height: var(--topbar-h);
-    display: flex;
-    align-items: center;
-    gap: var(--sp-4);
-    padding: 0 var(--sp-5);
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-        box-shadow: 0 1px 0 var(--border);
-}
-.topbar-spacer {
-    position: sticky;
-    top: var(--topbar-h);
-    height: var(--sp-8);
-    background: var(--bg);
-    z-index: 40;
-}
-.wordmark {
-    display: flex;
-    align-items: baseline;
-    gap: var(--sp-2);
-    color: var(--text);
-    font-family: var(--font-display);
-    font-weight: 700;
-    letter-spacing: 0.02em;
-}
-
-.wordmark:hover {
-    color: var(--text);
-    text-decoration: none;
-}
-
-.wordmark-mark {
-    font-size: 1.125rem;
-    color: var(--accent);
-}
-
-.wordmark-sub {
-    font-size: var(--fs-cap);
-    color: var(--text-muted);
-    font-family: var(--font-body);
-    font-weight: 500;
-    letter-spacing: 0;
-}
-
-.breadcrumb {
-    flex: 1;
-    min-width: 0;
-    font-size: var(--fs-cap);
-    color: var(--text-muted);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.breadcrumb .crumb-sep {
-    margin: 0 var(--sp-2);
-    opacity: .5;
-}
-
-.breadcrumb .crumb-current {
-    color: var(--accent);
-}
-
 /* 검색 트리거 (pill) */
 .search-trigger {
     display: inline-flex;
@@ -298,13 +228,10 @@ html[data-theme="dark"] main.main-content a:hover {
     border-radius: var(--r-chip);
 }
 
-.search-trigger--bar .search-label {
-    display: none;
-}
-
 .search-trigger--rail {
     width: 100%;
     justify-content: flex-start;
+    font-size: 0.9375rem;
 }
 
 /* 테마 토글 */
@@ -339,67 +266,7 @@ html[data-theme="dark"] .theme-ico--sun {
     display: inline;
 }
 
-/* drawer toggle (mobile only) */
-.drawer-toggle {
-    display: none;
-    width: 34px;
-    height: 34px;
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: var(--r-chip);
-    color: var(--text);
-    font-size: 1.05rem;
-    cursor: pointer;
-}
-
-/* ---------- 4. 레이아웃 3존 ---------- */
-.layout {
-    display: grid;
-    grid-template-columns: var(--rail-left-w) minmax(0, var(--content-w));
-    justify-content: center;
-    gap: var(--sp-8);
-    padding: 0 var(--sp-5);
-    align-items: start;
-    position: relative;
-    z-index: 1;
-}
-
-.rail {
-    position: sticky;
-    top: calc(var(--topbar-h) + var(--sp-8));
-    max-height: calc(100vh - var(--topbar-h) - var(--sp-8));
-    overflow-y: auto;
-    padding: var(--sp-6) 0;
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: var(--border) transparent; /* Firefox: thumb track */
-}
-
-.rail::-webkit-scrollbar {
-    width: 6px;
-}
-
-.rail::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.rail::-webkit-scrollbar-thumb {
-    background: var(--border);
-    border-radius: var(--r-chip);
-}
-
-.rail::-webkit-scrollbar-thumb:hover {
-    background: var(--accent);
-}
-/* ---------- 5. 좌측 스파인 (시그니처) ---------- */
-.rail-left {
-    display: flex;
-    flex-direction: column;
-    gap: var(--sp-4);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--r-frame);
-    padding: var(--sp-4);
-}
+/* ---------- 4. 레이아웃 ---------- */
 .spine {
     display: flex;
     flex-direction: column;
@@ -412,7 +279,7 @@ html[data-theme="dark"] .theme-ico--sun {
     padding: var(--sp-2) var(--sp-3);
     border-left: 3px solid transparent;
     color: var(--text-muted);
-    font-size: 0.9375rem;
+    font-size: 1rem;
     line-height: 1.3;
 }
 
@@ -436,7 +303,7 @@ html[data-theme="dark"] .theme-ico--sun {
     color: var(--tier, var(--text));
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
 }
 
 .spine-label {
@@ -471,7 +338,7 @@ html[data-theme="dark"] .theme-ico--sun {
 
 .spine-subitems .page-toc-link {
     padding: 6px var(--sp-2);
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 500;
 }
 
@@ -549,7 +416,7 @@ h2,
     padding: 0 0 0 var(--sp-3); /* 좌측 패딩 유지 */
     border-left: 4px solid var(--accent); /* 좌측 accent 막대 유지 */
     border-bottom: none;
-    scroll-margin-top: calc(var(--topbar-h) + 8px);
+    scroll-margin-top: 8px;
 }
 h3,
 .section-header {
@@ -559,7 +426,7 @@ h3,
     margin: var(--sp-7) 0 var(--sp-3);
     padding-bottom: var(--sp-1);
     border-bottom: 1px dashed var(--border); /* 은은한 점선 테두리 */
-    scroll-margin-top: calc(var(--topbar-h) + 8px);
+    scroll-margin-top: 8px;
 }
 
 h4,
@@ -569,7 +436,7 @@ h4,
     font-weight: 600;
     color: var(--text);
     margin: var(--sp-5) 0 var(--sp-2);
-    scroll-margin-top: calc(var(--topbar-h) + 8px);
+    scroll-margin-top: 8px;
     display: flex;
     align-items: center;
     gap: var(--sp-2);
@@ -620,15 +487,17 @@ main.main-content > .card:first-child {
     border-radius: var(--r-frame);
     box-shadow: var(--figure-shadow);
     margin: var(--sp-3) 0;
+
 }
 
 .full-size {
     width: 100%;
+    max-width: 70%;
 }
 
 .half-size {
     width: 100%;
-    max-width: 50%;
+    max-width: 40%;
 }
 
 .image-placeholder {
@@ -951,13 +820,6 @@ code,
     border-top: 1px solid var(--border);
 }
 
-/* scrim (drawer backdrop) */
-.scrim {
-    position: fixed;
-    inset: 0;
-    z-index: 45;
-    background: rgba(0, 0, 0, .5);
-}
 
 /*아크라시아 투어 강조 표시 — 형광펜처럼 확실히 눈에 띄도록 accent를 배경색으로, 텍스트는 반전 */
 mark {
@@ -1060,6 +922,7 @@ html[data-theme="dark"] mark {
     align-items: start;                    /* 핵심: 높이를 강제로 맞추지 않고 각자 높이 유지 */
     margin: 0;
     padding: 0;
+    max-width: 60%;
 }
 
 .img-grid p img {
@@ -1069,6 +932,100 @@ html[data-theme="dark"] mark {
     object-fit: contain;                   /* 찌그러짐 방지 */
     margin: 0;
     display: block;
+}
+/* ---------- 4. 공식 가이드 스타일 레이아웃 ---------- */
+.container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* 좌측 사이드바: 화면 전체 높이로 고정. 로고/검색/진행률 바는 항상 보이고,
+   가운데 .spine(목차)만 자체적으로 스크롤된다. */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+    width: var(--rail-left-w);
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    padding: var(--sp-8) var(--sp-4) var(--sp-6) var(--sp-4);
+    z-index: 50;
+}
+
+.sidebar .gnb__bi {
+    padding: var(--sp-4) var(--sp-6);
+}
+
+/* 목차 리스트만 스크롤. flex 자식은 기본적으로 min-height:auto라서
+   내용이 넘쳐도 안 줄어들고 overflow가 무시되는 문제가 있었음 —
+   min-height:0을 줘야 flex-grow가 실제로 상한선을 갖고 그 안에서
+   스크롤이 발생한다 (이게 스크롤이 안 되던 원인). */
+.sidebar .spine {
+    flex-grow: 1;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+}
+
+.sidebar .spine::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar .spine::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar .spine::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: var(--r-chip);
+}
+
+.sidebar .spine::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* 상단바가 없어진 자리를 대신해 테마/배경 토글을 화면 우상단에 고정 */
+#themeToggle,
+#bgToggle {
+    position: fixed;
+    top: var(--sp-5);
+    z-index: 100;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#themeToggle {
+    right: var(--sp-5);
+}
+
+#bgToggle {
+    right: var(--sp-12);
+}
+
+.contents {
+    flex-grow: 1;
+    min-width: 0;
+    /* fixed된 사이드바(--rail-left-w) 너비만큼 본문을 오른쪽으로 밀어줌 */
+    margin-left: var(--rail-left-w);
+    /* 공식 가이드처럼 우측에 여백을 두기 위해 본문 자체의 최대 너비를 제한.
+       이미지가 width:100%로 본문 폭을 꽉 채우는 구조라, 이 값이 곧 이미지가
+       커질 수 있는 최대 크기이기도 하다. */
+    max-width: 1220px;
+    padding: var(--sp-8) var(--sp-8) var(--sp-12) var(--sp-8);
+    background: transparent;
 }
 
 /* 모바일 대응 (768px 이하 1열) */
@@ -1261,44 +1218,16 @@ details img {
 }
 
 /* ---------- 12. 반응형 ---------- */
-@media (max-width: 1180px) {
-    .layout,
-    .layout-landing {
-        grid-template-columns: var(--rail-left-w) minmax(0, 1fr);
-    }
-}
-
-/* 모바일: 좌측 스파인 → off-canvas 드로어, 단일 컬럼 */
+/* 모바일 전용 UI(접이식 목차 등)는 별도 작업 예정. 지금은 좁은 화면에서
+   fixed 320px 사이드바가 본문을 막지 않도록 최소한의 안전장치만 둔다. */
 @media (max-width: 800px) {
-    .drawer-toggle {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+    .sidebar {
+        display: none;
     }
 
-    .layout,
-    .layout-landing {
-        grid-template-columns: minmax(0, 1fr);
-        padding: 0 var(--sp-4);
-    }
-
-    .rail-left {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 46;
-        width: min(280px, 84vw);
-        height: 100vh;
-        max-height: 100vh;
-        background: var(--surface);
-        border-right: 1px solid var(--border);
-        padding: var(--sp-12) var(--sp-4) var(--sp-4);
-        transform: translateX(-100%);
-        transition: transform .18s ease-out;
-    }
-
-    body.drawer-open .rail-left {
-        transform: translateX(0);
+    .contents {
+        margin-left: 0;
+        padding: var(--sp-6) var(--sp-4);
     }
 
     /* 하단 고정 UI: 모바일에서는 날짜 숨기고 버튼만 남겨 본문 침범 최소화 */
