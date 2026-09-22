@@ -25,6 +25,23 @@
                 });
             }
 
+            /* ---- 모바일 드로어 ---- */
+            var drawerBtn = document.getElementById('drawerToggle');
+            var drawerCloseBtn = document.getElementById('drawerClose');
+            var scrim = document.getElementById('drawerScrim');
+            function setDrawer(open) {
+                document.body.classList.toggle('drawer-open', open);
+                if (scrim) scrim.hidden = !open;
+                if (drawerBtn) drawerBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            }
+            if (drawerBtn) drawerBtn.addEventListener('click', function () {
+                setDrawer(!document.body.classList.contains('drawer-open'));
+            });
+            if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', function () { setDrawer(false); });
+            if (scrim) scrim.addEventListener('click', function () { setDrawer(false); });
+            document.querySelectorAll('.sidebar a').forEach(function (a) {
+                a.addEventListener('click', function () { setDrawer(false); });
+            });
             /* ---- 진행률 바 (스파인 하단 채움) ---- */
             var progressBar = document.getElementById('progressBar');
             function updateProgress() {

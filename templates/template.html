@@ -64,6 +64,8 @@
 
     <!-- [수정됨] 공식 가이드 스타일의 Flexbox 레이아웃 컨테이너 -->
     <div class="container layout-{{PAGEKIND}}">
+        <button class="drawer-toggle" id="drawerToggle" aria-label="섹션 목차 열기" aria-expanded="false">☰</button>
+        <div class="scrim" id="drawerScrim" hidden></div>
         <!-- Zone A: 좌측 고정 목차 (사이드바) -->
         <nav class="sidebar rail-left" id="railLeft" aria-label="전역 목차">
             <div class="gnb__header">
@@ -72,6 +74,7 @@
                 <img src="https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/bi-lostark.png" alt="Lostark">
             </a>
         </h1>
+        <button class="drawer-close" id="drawerClose" aria-label="목차 닫기">✕</button>
     </div>
             <button class="search-trigger search-trigger--rail" data-search-open aria-label="검색 열기">
                 <span class="search-ico" aria-hidden="true">🔍</span><span class="search-label">검색</span><kbd class="search-kbd">⌘K</kbd>

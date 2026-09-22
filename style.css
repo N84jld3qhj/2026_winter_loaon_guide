@@ -1206,6 +1206,14 @@ details img {
     display: block;
 }
 
+/* 데스크탑에서는 모바일 전용 컨트롤을 완전히 숨김. 모바일 미디어쿼리가
+   이 규칙보다 반드시 뒤에 와야 함 — 그래야 좁은 화면에서 다시 보이게
+   override 된다. */
+.drawer-toggle,
+.drawer-close,
+.scrim {
+    display: none;
+}
 
 @media (max-width: 768px) {
     .attack-compare-grid {
@@ -1226,30 +1234,77 @@ details img {
 }
 
 /* ---------- 12. 반응형 ---------- */
-/* 모바일 전용 UI(접이식 목차 등)는 별도 작업 예정. 지금은 좁은 화면에서
-   fixed 320px 사이드바가 본문을 막지 않도록 최소한의 안전장치만 둔다. */
 @media (max-width: 800px) {
+    .drawer-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: var(--sp-5);
+        left: var(--sp-5);
+        z-index: 70;
+        width: 34px;
+        height: 34px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--r-chip);
+        color: var(--text);
+        font-size: 1.05rem;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .drawer-close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background: transparent;
+        border: none;
+        color: var(--text);
+        font-size: 1.05rem;
+        cursor: pointer;
+    }
+
+    .scrim {
+        position: fixed;
+        inset: 0;
+        z-index: 55;
+        background: rgba(0, 0, 0, .5);
+    }
+
+    body.drawer-open .scrim {
+        display: block;
+    }
+
     .sidebar {
-        display: none;
+        transform: translateX(-100%);
+        transition: transform .2s ease-out;
+        z-index: 60;
+    }
+
+    body.drawer-open .sidebar {
+        transform: translateX(0);
     }
 
     .contents {
         margin-left: 0;
         padding: var(--sp-6) var(--sp-4);
     }
-
-    /* 하단 고정 UI: 모바일에서는 날짜 숨기고 버튼만 남겨 본문 침범 최소화 */
-    .fixed-bottom-ui {
-        right: var(--sp-3);
-        bottom: var(--sp-3);
+    .fixed-bottom-ui button#topBtn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 0;   /* "맨 위로" 텍스트를 숨김 */
+    border-radius: 50%;
     }
 
-    .fixed-bottom-ui .update-date {
-        display: none;
+    .fixed-bottom-ui button#topBtn::after {
+        content: "↑";
+        font-size: 1.1rem;
     }
 }
-
-
 
 @media (prefers-reduced-motion: reduce) {
     html {
