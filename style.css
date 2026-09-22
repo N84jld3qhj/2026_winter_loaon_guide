@@ -1304,6 +1304,9 @@ details img {
         content: "↑";
         font-size: 1.1rem;
     }
+    .fixed-bottom-ui .update-date {
+    display: none;
+}
 }
 
 @media (prefers-reduced-motion: reduce) {
