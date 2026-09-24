@@ -27,7 +27,7 @@ image: /images/sites/discord.com.jpg
 
 공식 홈페이지에서도 [➡️ 전투정보실](https://lostark.game.onstove.com/Profile/Character) 을 제공하기는 하지만 UI나 기능면에서 부족한게 많기 때문에 외부 사이트들을 많이 사용합니다.
 
-캐릭터 정보는 이다님 캐릭터로 통일했습니다. 혹시 불편하시다면 연락을 주시면 바로 수정하겠습니다.
+
 :::site-card
 title: 로아와(LOAWA) - 로스트아크 정보 제공
 url: https://loawa.com/
@@ -46,6 +46,7 @@ image: /images/sites/03.png
 ## 재련 정보
 
 재련 비용이나 효율적인 재련 순서등을 알려주는 사이트들입니다.
+
 보유 재료, 목표 단계 등을 입력하면 필요한 재화들을 계산해줍니다. 
 
 :::site-card
@@ -92,6 +93,7 @@ image: /images/sites/loagap.com.png
 ## 스펙업 시뮬레이션
 
 캐릭터의 세팅을 기준으로 가장 효율적인 스펙업 순서를 시뮬레이션해주는 사이트들입니다.
+
 낭만빼고 효율을 중시한다면 사이트 추천 순서대로 스펙업을 하시는게 좋습니다.
 
 :::site-card
@@ -154,23 +156,11 @@ url: https://loakong.com/
 desc: 로스트아크 캐릭터 전적 검색, 실시간 아이템 시세 확인, 각인 및 특성 최적화 시뮬레이션을 제공하는 로아콩입니다.
 image: /images/sites/loakong.com.png
 :::
-## 아크 그리드
+## 젬 장착 최적화
 
-게임 내에 젬 자동 장착 기능이 있지만 장착 기준이 전투력이라서 젬이 충분하지 않은 상태라면 코어를 제대로 활성화하지 않은 세팅으로 장착이 되는 경우가 있습니다.
+게임 내에 젬 자동 장착 기능이 있지만 장착 기준이 전투력이라서 젬이 충분하지 않은 상태라면 코어가 제대로 활성화 되지 않는 경우가 있습니다.
+
 그럴때는 외부 사이트에서 직접 세팅이 가능한지 확인하고 젬을 장착하는걸 추천드립니다.
-
-:::site-card
-title: 아크 그리드 젬 교체 효율 | LOALAB
-url: https://lo4.app/tools/gem-upgrades
-desc: 캐릭터의 아크 그리드 젬을 분석하고 전투력 상승과 기대 비용을 비교해 효율적인 교체 순서를 확인하세요.
-image: /images/sites/lo4.app.png
-:::
-:::site-card
-title: 아크그리드 젬 최적화 · LoaGuard
-url: https://loaguard.com/arkgrid-gem
-desc: 장착 중인 아크그리드 젬 구성을 분석해 어떤 젬부터 교체하는 것이 효율이 좋은지 우선순위로 추천합니다.
-image: /images/sites/10.png
-:::
 
 :::site-card
 title: ALOA - 아크그리드 최적화
@@ -184,11 +174,38 @@ url: https://airplaner.github.io/lostark-arkgrid-gem-locator-v2/
 desc: 가장 높은 전투력의 아크 그리드 세팅을 계산합니다. 화면 인식으로 빠르게 젬을 추가하고 관리할 수 있습니다.
 image: /images/sites/airplaner.github.io.png
 :::
+
+
+## 젬 가공 시뮬레이션
+
+젬 가공 시 선택지별 확률을 계산해 최적의 젬 가공 방법을 찾아주는 사이트입니다.
+
+어차피 젬 가공이 운이라 이거 써도 안되는 경우에는 안되는대 젬 가공에 자아가 없는 뉴비들이 사용하시면 좋습니다.
+
 :::site-card
 title: 로스트아크 젬파고 - 아크 그리드 젬 확률 계산기
 url: https://loatto.kr/gempago
 desc: 로스트아크 젬파고 - 아크 그리드 젬 가공 확률 계산기. 아크 그리드 젬 최적화를 위한 정확한 확률 계산과 시뮬레이션을 제공합니다.
 image: /images/sites/05.png
+:::
+
+## 젬 가공 효율
+
+발사대 이후 보피작을 시작하게 되면 젬 깎는 효율을 생각하게 되는대 그때 젬깎 효율을 알려주는 사이트들입니다.
+
+부위별 젬 가공 효율을 계산하여 우선순위를 제공합니다.
+
+:::site-card
+title: 아크 그리드 젬 교체 효율 | LOALAB
+url: https://lo4.app/tools/gem-upgrades
+desc: 캐릭터의 아크 그리드 젬을 분석하고 전투력 상승과 기대 비용을 비교해 효율적인 교체 순서를 확인하세요.
+image: /images/sites/lo4.app.png
+:::
+:::site-card
+title: 아크그리드 젬 최적화 · LoaGuard
+url: https://loaguard.com/arkgrid-gem
+desc: 장착 중인 아크그리드 젬 구성을 분석해 어떤 젬부터 교체하는 것이 효율이 좋은지 우선순위로 추천합니다.
+image: /images/sites/10.png
 :::
 
 
