@@ -198,6 +198,7 @@ image: /images/sites/08.png
 title: 지옥 보상 효율 - 지옥 던전 보상 분석
 url: https://loatto.kr/hell-rewards
 desc: 로스트아크 지옥 던전 보상 효율 분석. 캐릭터별 최적의 지옥 던전 난이도를 추천하고, 보상 기대값을 계산합니다.
+image: /images/sites/05.png
 :::
 :::site-card
 title: 시즌3 지옥 보상표 | 로펙
