@@ -91,6 +91,9 @@ image: /images/sites/loagap.com.png
 
 ## 스펙업 시뮬레이션
 
+캐릭터의 세팅을 기준으로 가장 효율적인 스펙업 순서를 시뮬레이션해주는 사이트들입니다.
+낭만빼고 효율을 중시한다면 사이트 추천 순서대로 스펙업을 하시는게 좋습니다.
+
 :::site-card
 title: 로아가드(LoaGuard) - 로스트아크 캐릭터 조회·전투력 랭킹·내실·레이드 헬퍼·고정 공대
 url: https://loaguard.com/
