@@ -43,7 +43,6 @@ image: /images/sites/03.png
 
 전투정보실 사이트는 위에 적은곳 말고도 다른 사이트들이 많습니다. UI 맘에 드는 사이트 골라서 사용하시면 됩니다.
 
-
 ## 재련 정보
 
 재련 비용이나 효율적인 재련 순서등을 알려주는 사이트들입니다.
@@ -65,7 +64,12 @@ title: 로아베스팅
 url: https://www.loavesting.com/
 desc: 재련 견적 사이트 
 :::
-
+:::
+title: 통합 재련 플랜 · 일반·상급 재련 계산기 · LoaGuard
+url: https://loaguard.com/honing/
+desc: 통합 재련 플랜·일반 재련 효율·상급 재련 보조재료 전략을 한곳에서 계산합니다. 업화·전율·계승 경로 포함 6부위 최소비용 경로를 자동 산출합니다.
+image: /images/sites/10.png
+:::
 :::site-card
 title: 통합재련 시뮬레이터 | Loatto
 url: https://loatto.kr/refining-simulator
@@ -84,6 +88,29 @@ url: https://loagap.com/efficiency/enhance
 desc: 로스트아크 상급 재련 비용 대비 효율을 실시간 시세로 분석하고, 최적의 재련 루트를 제안하는 계산기입니다.
 image: /images/sites/loagap.com.png
 :::
+
+## 스펙업 시뮬레이션
+
+:::
+title: 로아가드(LoaGuard) - 로스트아크 캐릭터 조회·전투력 랭킹·내실·레이드 헬퍼·고정 공대
+url: https://loaguard.com/
+desc: 캐릭터 스펙·전투력 랭킹·내실 진행도부터 레이드 헬퍼·고정 공대 일정까지. 로스트아크 올인원 도구.
+image: /images/sites/10.png
+:::
+:::
+title: 로아업 LoaUp - 로스트아크 캐릭터 스펙업 효율 및 우선순위
+url: https://loaup.com/combatpower-curve
+desc: 로스트아크 캐릭터 정보 조회 및 개인화 스펙업 효율 우선순위 분석 서비스입니다.
+image: /images/sites/11.png
+:::
+:::
+title: 로펙 | 로스트아크 환산 점수·시뮬레이터
+url: https://lopec.kr/
+desc: 로스트아크 캐릭터 환산 점수, 장비, 랭킹, 시뮬레이터까지 한 번에 확인하세요.
+image: /images/sites/lopec.kr.png
+:::
+
+
 ## 전투력
 
 환산 전투력을 알려주는 사이트들입니다. 시즌3가 나오면서 아이템 레벨 이외에 스펙 점수가 필요한 상황이 많아졌고 외부 사이트에서 환산 전투력이 나오기 시작했습니다.
@@ -127,8 +154,21 @@ image: /images/sites/loakong.com.png
 ## 아크 그리드
 
 게임 내에 젬 자동 장착 기능이 있지만 장착 기준이 전투력이라서 젬이 충분하지 않은 상태라면 코어를 제대로 활성화하지 않은 세팅으로 장착이 되는 경우가 있습니다.
-
 그럴때는 외부 사이트에서 직접 세팅이 가능한지 확인하고 젬을 장착하는걸 추천드립니다.
+
+:::
+title: 아크 그리드 젬 교체 효율 | LOALAB
+url: https://lo4.app/tools/gem-upgrades
+desc: 캐릭터의 아크 그리드 젬을 분석하고 전투력 상승과 기대 비용을 비교해 효율적인 교체 순서를 확인하세요.
+image: /images/sites/lo4.app.png
+:::
+:::
+title: 아크그리드 젬 최적화 · LoaGuard
+url: https://loaguard.com/arkgrid-gem
+desc: 장착 중인 아크그리드 젬 구성을 분석해 어떤 젬부터 교체하는 것이 효율이 좋은지 우선순위로 추천합니다.
+image: /images/sites/10.png
+:::
+
 :::site-card
 title: ALOA - 아크그리드 최적화
 url: https://aloa.gg/ko/arkgrid
