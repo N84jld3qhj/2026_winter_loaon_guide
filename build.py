@@ -274,6 +274,20 @@ def render_site_card_block(m: re.Match) -> str:
     if not title or not url:
         return m.group(0)
 
+    # === [수정 부분] image 경로 변환 로직 ===
+    # /images/sites/09.png 형태 또는 images/sites/09.png 형태 처리
+    if image:
+        # 맨 앞의 / 나 ./ 제거
+        clean_image_path = re.sub(r'^\.?/*', '', image)
+        
+        # GitHub Pages 저장소 경로를 포함한 완전한 URL 생성
+        # (만약 도메인 없이 상대경로만 쓰려면 f"{clean_image_path}" 만 쓰셔도 됩니다)
+        if clean_image_path.startswith("images/"):
+            image = f"https://n84jld3qhj.github.io/2026_winter_loaon_guide/{clean_image_path}"
+        elif not image.startswith("http"):
+            image = f"https://n84jld3qhj.github.io/2026_winter_loaon_guide/images/{clean_image_path}"
+    # ====================================
+
     title = html_lib.escape(title)
     url = html_lib.escape(url, quote=True)
     desc = html_lib.escape(desc)
