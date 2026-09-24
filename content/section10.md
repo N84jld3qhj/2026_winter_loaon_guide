@@ -159,13 +159,13 @@ image: /images/sites/loakong.com.png
 게임 내에 젬 자동 장착 기능이 있지만 장착 기준이 전투력이라서 젬이 충분하지 않은 상태라면 코어를 제대로 활성화하지 않은 세팅으로 장착이 되는 경우가 있습니다.
 그럴때는 외부 사이트에서 직접 세팅이 가능한지 확인하고 젬을 장착하는걸 추천드립니다.
 
-:::
+:::site-card
 title: 아크 그리드 젬 교체 효율 | LOALAB
 url: https://lo4.app/tools/gem-upgrades
 desc: 캐릭터의 아크 그리드 젬을 분석하고 전투력 상승과 기대 비용을 비교해 효율적인 교체 순서를 확인하세요.
 image: /images/sites/lo4.app.png
 :::
-:::
+:::site-card
 title: 아크그리드 젬 최적화 · LoaGuard
 url: https://loaguard.com/arkgrid-gem
 desc: 장착 중인 아크그리드 젬 구성을 분석해 어떤 젬부터 교체하는 것이 효율이 좋은지 우선순위로 추천합니다.
