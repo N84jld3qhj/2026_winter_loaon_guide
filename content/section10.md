@@ -64,7 +64,7 @@ title: 로아베스팅
 url: https://www.loavesting.com/
 desc: 재련 견적 사이트 
 :::
-:::
+:::site-card
 title: 통합 재련 플랜 · 일반·상급 재련 계산기 · LoaGuard
 url: https://loaguard.com/honing/
 desc: 통합 재련 플랜·일반 재련 효율·상급 재련 보조재료 전략을 한곳에서 계산합니다. 업화·전율·계승 경로 포함 6부위 최소비용 경로를 자동 산출합니다.
@@ -91,19 +91,19 @@ image: /images/sites/loagap.com.png
 
 ## 스펙업 시뮬레이션
 
-:::
+:::site-card
 title: 로아가드(LoaGuard) - 로스트아크 캐릭터 조회·전투력 랭킹·내실·레이드 헬퍼·고정 공대
 url: https://loaguard.com/
 desc: 캐릭터 스펙·전투력 랭킹·내실 진행도부터 레이드 헬퍼·고정 공대 일정까지. 로스트아크 올인원 도구.
 image: /images/sites/10.png
 :::
-:::
+:::site-card
 title: 로아업 LoaUp - 로스트아크 캐릭터 스펙업 효율 및 우선순위
 url: https://loaup.com/combatpower-curve
 desc: 로스트아크 캐릭터 정보 조회 및 개인화 스펙업 효율 우선순위 분석 서비스입니다.
 image: /images/sites/11.png
 :::
-:::
+:::site-card
 title: 로펙 | 로스트아크 환산 점수·시뮬레이터
 url: https://lopec.kr/
 desc: 로스트아크 캐릭터 환산 점수, 장비, 랭킹, 시뮬레이터까지 한 번에 확인하세요.
