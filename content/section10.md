@@ -38,6 +38,7 @@ image: /images/sites/loawa.com.jpg
 title: 클로아 - 로스트아크 전투정보, 떠돌이 상인, 랭킹
 url: https://kloa.gg/
 desc: 로스트아크 모험가를 위한 올인원 도우미, 클로아! 클로아에서는 캐릭터 검색, 전투력/아이템 레벨 랭킹, 내실 랭킹, 떠돌이 상인 정보 및 유물 각인서 시세 차트 등을 확인하실 수 있어요.
+image: /images/sites/03.png
 :::
 
 전투정보실 사이트는 위에 적은곳 말고도 다른 사이트들이 많습니다. UI 맘에 드는 사이트 골라서 사용하시면 됩니다.
@@ -69,13 +70,15 @@ desc: 재련 견적 사이트
 title: 통합재련 시뮬레이터 | Loatto
 url: https://loatto.kr/refining-simulator
 desc: 여러 재련단계를 통합해서 확인하고 장비성장 및 담금질 비용을 포함하여 계산합니다. 장비별 강화 계획을 세워보세요.
+image: /images/sites/05.png
 :::
 :::site-card
 title: 로스트아크 재련·시세·보상 계산 | LOALAB
 url: https://lo4.app
 desc: 로스트아크 모험가를 위한 올인원 사이트 - 재련 최적화부터 시세 분석까지
 image: /images/sites/lo4.app.png
-::::::site-card
+:::
+:::site-card
 title: 상급 재련 효율 계산기 | LOAGAP
 url: https://loagap.com/efficiency/enhance
 desc: 로스트아크 상급 재련 비용 대비 효율을 실시간 시세로 분석하고, 최적의 재련 루트를 제안하는 계산기입니다.
@@ -96,6 +99,7 @@ image: /images/sites/lopec.kr.png
 title: 즐로아 ZLOA - 로스트아크 환산 점수, 랭킹
 url: https://zloa.net/
 desc: 즐로아 ZLOA - 로스트아크 환산 점수, 랭킹
+image: /images/sites/06.png
 :::
 
 
@@ -107,12 +111,14 @@ title: 로스트허브 - 로스트아크 딜 계산기·재련·경매 유틸리
 url: https://losthub.cloud/
 desc: 로아 딜 계산기·재련·경매·거래소 시세를 한곳에 모은 로스트아크 유틸리티 사이트. 캐릭터 닉네임 검색 한 번으로 스킬별 기대 DPS와 딜 지분을 확인하고 장비·보석·각인·아크그리드를 바꿔 보며 효율을 비교하세요.
 image: /images/sites/losthub.cloud.png
-::::::site-card
+:::
+:::site-card
 title: 러스트빌드 - 로아 데미지 시뮬레이터
 url: https://lustbuilds.kr/
 desc: 로스트아크 캐릭터 데미지 시뮬레이션과 세팅 비교 분석
 image: /images/sites/lustbuilds.kr.png
-::::::site-card
+:::
+:::site-card
 title: 로아콩 - 로스트아크 전적 검색 및 캐릭터 시뮬레이터
 url: https://loakong.com/
 desc: 로스트아크 캐릭터 전적 검색, 실시간 아이템 시세 확인, 각인 및 특성 최적화 시뮬레이션을 제공하는 로아콩입니다.
@@ -128,22 +134,18 @@ title: ALOA - 아크그리드 최적화
 url: https://aloa.gg/ko/arkgrid
 desc: 로스트아크 게임 화면을 실시간으로 인식하여 젬 정보를 추출, 보유 코어에 최적화 하는 도구 입니다.
 image: /images/sites/aloa.gg.png
-::::::site-card
+:::
+:::site-card
 title: 아크 그리드 전투력 최적화
 url: https://airplaner.github.io/lostark-arkgrid-gem-locator-v2/
 desc: 가장 높은 전투력의 아크 그리드 세팅을 계산합니다. 화면 인식으로 빠르게 젬을 추가하고 관리할 수 있습니다.
 image: /images/sites/airplaner.github.io.png
 :::
 :::site-card
-title: 로스트아크 계산기
-url: https://sunnypop424.github.io/#/core/optimizer
-desc: 로스트아크 아크그리드 코어 젬/페온/아바타 계산기
-:::
-
-:::site-card
 title: 로스트아크 젬파고 - 아크 그리드 젬 확률 계산기
 url: https://loatto.kr/gempago
 desc: 로스트아크 젬파고 - 아크 그리드 젬 가공 확률 계산기. 아크 그리드 젬 최적화를 위한 정확한 확률 계산과 시뮬레이션을 제공합니다.
+image: /images/sites/05.png
 :::
 
 
@@ -160,6 +162,7 @@ image: /images/sites/loalogol.kr.png
 title: 로아차트
 url: https://loachart.com/rewardcalc
 desc: 로아차트
+image: /images/sites/07.png
 :::
 
 
@@ -177,12 +180,14 @@ image: /images/sites/loatool.taeu.kr.png
 title: 즐로아 ZLOA - 로스트아크 환산 점수, 랭킹
 url: https://zloa.net/craft
 desc: 즐로아 ZLOA - 로스트아크 환산 점수, 랭킹
+image: /images/sites/06.png
 :::
 :::site-card
 title: 로스트골드 - 효율적인 골드 수급·소비
 url: https://lostgld.com/
 desc: 로스트아크 재화 수급 계산기
-image: /images/sites/lostgld.com.png
+image: /images/sites/08.png
+
 :::
 ## 지옥보상
 
@@ -208,6 +213,7 @@ image: /images/sites/lopec.kr.png
 title: Raid Statistics | lostark.bible
 url: https://lostark.bible/stats/raids
 desc: 
+https://lostgld.com/09.png
 :::
 
 
