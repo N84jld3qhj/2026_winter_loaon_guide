@@ -213,7 +213,7 @@ image: /images/sites/lopec.kr.png
 title: Raid Statistics | lostark.bible
 url: https://lostark.bible/stats/raids
 desc: 
-https://lostgld.com/09.png
+image: /images/sites/09.png
 :::
 
 
