@@ -25,6 +25,8 @@ import struct
 import sys
 import markdown
 import datetime
+import html as html_lib
+from urllib.parse import urlparse
 
 ROOT = pathlib.Path(__file__).resolve().parent
 CONTENT = ROOT / "content"
@@ -240,6 +242,90 @@ def add_image_dimensions(html: str) -> str:
         return f'<img{pre}src="{src}"{post.rstrip()} width="{w}" height="{h}">'
     return IMG_TAG_RE.sub(_inject, html)
 
+# ---------- 외부 사이트 링크 카드 ----------
+SITE_CARD_BLOCK_RE = re.compile(
+    r'^\s*:::\s*site-card\s*\n(.*?)^\s*:::\s*$',
+    re.IGNORECASE | re.MULTILINE | re.DOTALL
+)
+
+
+def render_site_card_block(m: re.Match) -> str:
+    body = m.group(1)
+
+    values = {}
+
+    for line in body.splitlines():
+        line = line.strip()
+        if not line or ":" not in line:
+            continue
+
+        key, value = line.split(":", 1)
+        key = key.strip().lower()
+        value = value.strip()
+
+        if key in {"title", "url", "desc", "image"}:
+            values[key] = value
+
+    title = values.get("title", "")
+    url = values.get("url", "")
+    desc = values.get("desc", "")
+    image = values.get("image", "")
+
+    if not title or not url:
+        return m.group(0)
+
+    title = html_lib.escape(title)
+    url = html_lib.escape(url, quote=True)
+    desc = html_lib.escape(desc)
+
+    if image:
+        image_html = (
+            f'<div class="site-card-image">'
+            f'<img src="{html_lib.escape(image, quote=True)}" alt="">'
+            f'</div>'
+        )
+    else:
+        image_html = (
+            '<div class="site-card-image site-card-image-empty">'
+            '↗'
+            '</div>'
+        )
+
+    try:
+        domain = urlparse(values.get("url", "")).netloc
+    except Exception:
+        domain = ""
+
+    domain = html_lib.escape(domain)
+
+    return f'''
+<a class="site-card" href="{url}" target="_blank" rel="noopener noreferrer">
+    {image_html}
+    <div class="site-card-body">
+        <div class="site-card-title">{title}</div>
+        <div class="site-card-domain">{domain}</div>
+        <div class="site-card-desc">{desc}</div>
+    </div>
+    <div class="site-card-arrow">↗</div>
+</a>
+'''.strip()
+
+
+def convert_site_cards(text: str):
+    cards = []
+
+    def replace_card(m):
+        index = len(cards)
+
+        # 실제 HTML은 Markdown 변환이 끝난 뒤 삽입
+        cards.append(render_site_card_block(m))
+
+        # Markdown에서 일반 텍스트로 처리되지 않도록 임시 토큰 사용
+        return f"\n\n<!--SITE_CARD_{index}-->\n\n"
+
+    text = SITE_CARD_BLOCK_RE.sub(replace_card, text)
+
+    return text, cards
 
 def read(path: pathlib.Path) -> str:
     return path.read_text(encoding="utf-8")
@@ -259,7 +345,6 @@ def read_fragment(frag: str, pid: str) -> str:
     # 둘 다 없으면 임시 내용 생성
     return f"# {pid}\n\n내용 준비 중입니다."
 
-
 def main() -> int:
     registry: dict[str, str] = {LANDING_ID: LANDING_FILE}
     for pid, fname, _label, _frag, _title in SECTIONS:
@@ -276,8 +361,27 @@ def main() -> int:
     
     for pid, frag, fname in fragments:
         raw_text = read_fragment(frag, pid)
+
+        # site-card를 임시 토큰으로 치환
+        raw_text, site_cards = convert_site_cards(raw_text)
+
+        # Markdown 변환
         html = md_converter.convert(raw_text)
         md_converter.reset()
+
+        # Markdown 변환이 끝난 후 실제 카드 HTML 삽입
+        for i, card_html in enumerate(site_cards):
+            token = f'<!--SITE_CARD_{i}-->'
+
+            html = html.replace(
+                f'<p>{token}</p>',
+                card_html
+            )
+
+            html = html.replace(
+                token,
+                card_html
+            )
 
     # === [추가] H2 기준으로 자동으로 div.card 감싸기 ===
         if pid != "intro": # intro가 아닌 일반 섹션 페이지일 때
