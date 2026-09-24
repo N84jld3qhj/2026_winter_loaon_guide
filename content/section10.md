@@ -89,6 +89,12 @@ url: https://loagap.com/efficiency/enhance
 desc: 로스트아크 상급 재련 비용 대비 효율을 실시간 시세로 분석하고, 최적의 재련 루트를 제안하는 계산기입니다.
 image: /images/sites/loagap.com.png
 :::
+:::site-card
+title: 강화 최적화 | 로펙
+url: https://lopec.kr/tool/enhancement
+desc: 로스트아크 캐릭터 환산 점수, 장비, 랭킹, 시뮬레이터까지 한 번에 확인하세요.
+image: /images/sites/lopec.kr.png
+:::
 
 ## 스펙업 시뮬레이션
 
@@ -224,7 +230,12 @@ url: https://loachart.com/rewardcalc
 desc: 로아차트
 image: /images/sites/07.png
 :::
-
+:::site-card
+title: 로아샵 효율 | 로펙
+url: https://lopec.kr/tool/enhancement
+desc: 로스트아크 캐릭터 환산 점수, 장비, 랭킹, 시뮬레이터까지 한 번에 확인하세요.
+image: /images/sites/lopec.kr.png
+:::
 
 ## 생활 / 영지 제작 효율
 
