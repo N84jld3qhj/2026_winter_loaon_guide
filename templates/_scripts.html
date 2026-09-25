@@ -232,19 +232,6 @@
         })();
     </script>
 
-
-<script>
-        //배경화면 온오프
-        (function () {
-            var btn = document.getElementById('bgToggle');
-            if (!btn) return;
-            btn.addEventListener('click', function () {
-                var enabled = !document.documentElement.classList.contains('bg-hidden');
-                document.documentElement.classList.toggle('bg-hidden', enabled);
-                localStorage.setItem('bgImageEnabled', enabled ? '0' : '1');
-            });
-        })();
-    </script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     // 1. 이미지 경로만 배열로 관리 (파일명이 곧 직업명)

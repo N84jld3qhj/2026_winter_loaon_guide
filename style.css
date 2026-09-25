@@ -125,14 +125,7 @@ html::-webkit-scrollbar-thumb:hover {
 
 body {
     background-color: var(--bg);
-    /* JS(head 인라인 스크립트)가 --page-bg-image를 세팅해줌. 값이 없으면
-       기본 var(--bg) 색만 보임 — images/ZONE/ 폴더가 비어있어도
-       안전하게 동작 */
-    background-image: var(--page-bg-image, none);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+
     /* 배경색과 사진을 섞어서 사진 톤이 테마(라이트/다크)에 자연스럽게
        맞춰지게 함 — 별도 오버레이 요소 없이 body 배경 레이어만으로 처리 */
     /* background-blend-mode: overlay; */
@@ -145,10 +138,6 @@ body {
     transition: background-color .15s ease, color .15s ease;
 }
 
-/*배경화면 온오프*/
-html.bg-hidden body {
-    background-image: none;
-}
 
 img {
     display: block;
@@ -1004,8 +993,7 @@ html[data-theme="dark"] mark {
 }
 
 /* 상단바가 없어진 자리를 대신해 테마/배경 토글을 화면 우상단에 고정 */
-#themeToggle,
-#bgToggle {
+#themeToggle{
     position: fixed;
     top: var(--sp-5);
     z-index: 100;

@@ -32,19 +32,6 @@ ROOT = pathlib.Path(__file__).resolve().parent
 CONTENT = ROOT / "content"
 TEMPLATES = ROOT / "templates"
 DIST = ROOT / "dist"
-BG_DIR = ROOT / "images" / "bg"
-BG_EXTS = {".jpg", ".jpeg", ".png", ".webp"}
-
-
-def list_background_images() -> list[str]:
-    """images/bg/ 안의 이미지 파일 목록을 dist 기준 상대경로로 반환.
-       폴더가 없거나 비어있으면 빈 리스트 (JS 쪽에서 빈 리스트면 아무 것도
-       안 하고 조용히 넘어가도록 처리되어 있음)."""
-    if not BG_DIR.exists():
-        return []
-    names = sorted(p.name for p in BG_DIR.iterdir() if p.suffix.lower() in BG_EXTS)
-    return [f"images/bg/{n}" for n in names]
-
 
 # Top-level navigation / page table. Order = display order.
 # (page_id, output filename, short nav label, content fragment, <title>)
@@ -456,7 +443,6 @@ def main() -> int:
     build_date = datetime.date.today().strftime("%Y. %m. %d")
     scripts = scripts.replace("{{BUILD_DATE}}", build_date)
 
-    bg_images_json = json.dumps(list_background_images(), ensure_ascii=False)
 
     DIST.mkdir(exist_ok=True)
 
@@ -518,7 +504,6 @@ def main() -> int:
         page = template
         page = page.replace("{{TITLE}}", title)
         page = page.replace("{{PAGEKIND}}", kind)
-        page = page.replace("{{BG_IMAGES}}", bg_images_json)
         page = page.replace("{{BREADCRUMB}}", breadcrumb(active))
         page = page.replace("{{SPINE}}", spine(active))
         page = page.replace("{{CONTENT}}", content)
