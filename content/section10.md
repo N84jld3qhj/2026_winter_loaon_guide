@@ -269,17 +269,38 @@ url: https://lopec.kr/tool/enhancement
 desc: 로스트아크 캐릭터 환산 점수, 장비, 랭킹, 시뮬레이터까지 한 번에 확인하세요.
 image: /images/sites/lopec.kr.png
 :::
+### 로아픽
+:::site-card
+title: 로아픽
+url: https://loapick.com/
+desc: 로스트아크 경매장 검색, 재련 최적화, 패키지 효율, 거래소 시세와 교환 가치를 한곳에서 확인하세요.
+image: /images/sites/12.png
+:::
 
 ## 생활 / 영지 제작 효율
 
 생활 관련 사이트들입니다. 
 생활 도구 옵션 비교, 영지 제작 효율 등 생활 관련 정보를 얻을 수 있습니다.
+### 로스트골드
+:::site-card
+title: 로스트골드 - 효율적인 골드 수급·소비
+url: https://lostgld.com/
+desc: 로스트아크 재화 수급 계산기
+image: /images/sites/08.png
+:::
 ### 로아도구
 :::site-card
 title: 로아도구 - 로스트아크 실시간 정보 제공 사이트
 url: https://loatool.taeu.kr/
 desc: 영지 제작 효율을 확인할 수 있습니다. 본인 영지 세팅 입력 후 제작 효율을 확인할 수 있습니다.
 image: /images/sites/loatool.taeu.kr.png
+:::
+### 로아로골
+:::site-card
+title: 로아로골 | 벌목 계산기 - 생활 효율, 융화재료 제작
+url: https://loalogol.kr/life-master
+desc: 로아로골 벌목 효율, 로아 생활 효율, 로아 융화재료 제작 손익을 실시간 시세로 계산하세요.
+image: /images/sites/loalogol.kr.png
 :::
 ### 즐로아
 :::site-card
@@ -288,13 +309,7 @@ url: https://zloa.net/craft
 desc: 즐로아 ZLOA - 로스트아크 환산 점수, 랭킹
 image: /images/sites/06.png
 :::
-### 로스트골드
-:::site-card
-title: 로스트골드 - 효율적인 골드 수급·소비
-url: https://lostgld.com/
-desc: 로스트아크 재화 수급 계산기
-image: /images/sites/08.png
-:::
+
 
 ## 지옥보상
 
