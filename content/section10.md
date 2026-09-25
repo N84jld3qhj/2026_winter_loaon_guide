@@ -91,9 +91,9 @@ image: /images/sites/05.png
 :::
 ### 로아랩
 :::site-card
-title: 로스트아크 재련·시세·보상 계산 | LOALAB
-url: https://lo4.app
-desc: 로스트아크 모험가를 위한 올인원 사이트 - 재련 최적화부터 시세 분석까지
+title: 통합 재련 계산기 | LOALAB
+url: https://lo4.app/tools/refine
+desc: 캐릭터 검색으로 일반·상급 재련 목표와 필요 재료를 계산하고, 일반 재련·상급 재련 계산기와 특재 효율을 한 곳에서 확인하세요.
 image: /images/sites/lo4.app.png
 :::
 ### 로아갭
@@ -109,6 +109,13 @@ title: 강화 최적화 | 로펙
 url: https://lopec.kr/tool/enhancement
 desc: 로스트아크 캐릭터 환산 점수, 장비, 랭킹, 시뮬레이터까지 한 번에 확인하세요.
 image: /images/sites/lopec.kr.png
+:::
+### 로아가드
+:::site-card
+title: 통합 재련 플랜 · 일반·상급 재련 계산기 · LoaGuard
+url: https://loaguard.com/honing
+desc: 통합 재련 플랜·일반 재련 효율·상급 재련 보조재료 전략을 한곳에서 계산합니다. 업화·전율·계승 경로 포함 6부위 최소비용 경로를 자동 산출합니다.
+image: /images/sites/10.png
 :::
 
 ## 스펙업 시뮬레이션
@@ -276,6 +283,13 @@ url: https://loapick.com/
 desc: 로스트아크 경매장 검색, 재련 최적화, 패키지 효율, 거래소 시세와 교환 가치를 한곳에서 확인하세요.
 image: /images/sites/12.png
 :::
+### 알로아
+:::site-card
+title: ALOA - 효율 분석
+url: https://aloa.gg/ko/efficiency
+desc: 레이드 더보기, 클리어 메달, 재료 교환 효율 분석
+image: /images/sites/aloa.gg.png
+:::
 
 ## 생활 / 영지 제작 효율
 
@@ -301,6 +315,13 @@ title: 로아로골 | 벌목 계산기 - 생활 효율, 융화재료 제작
 url: https://loalogol.kr/life-master
 desc: 로아로골 벌목 효율, 로아 생활 효율, 로아 융화재료 제작 손익을 실시간 시세로 계산하세요.
 image: /images/sites/loalogol.kr.png
+:::
+### 로아랩
+:::site-card
+title: 아비도스 쌀산기 | LOALAB
+url: https://lo4.app/tools/item-craft
+desc: 로스트아크 생활 제작 수익을 계산하세요. 재료 가격을 입력하면 제작 비용과 수익을 분석할 수 있습니다.
+image: /images/sites/lo4.app.png
 :::
 ### 즐로아
 :::site-card
@@ -336,6 +357,13 @@ title: 지옥 보상 분석 (시즌 4) | LOALAB
 url: https://lo4.app/tools/hell-reward
 desc: 로스트아크 시즌 4 지옥/나락 열쇠 기대 가치와 상자 골드 효율을 계산하고, 특수 점프와 나락 중단 판단을 비교하세요.
 image: /images/sites/lo4.app.png
+:::
+### 로아로골
+:::site-card
+title: 로아로골 | 지옥 보상 계산기
+url: https://loalogol.kr/hell-reward
+desc: 로스트아크 지옥/나락 보상을 층수별로 정리하고 실시간 시세 기반으로 골드 가치를 계산합니다.
+image: /images/sites/loalogol.kr.png
 :::
 
 ## 북미 미터기
