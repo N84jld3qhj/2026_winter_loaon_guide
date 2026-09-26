@@ -75,19 +75,42 @@ image: /images/sites/lopec.kr.png
 
 ### 효율적인 재련 방법과 순서
 
-![이미지 173](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0173.png)
-
 로스트아크에는 거래 가능한 재료와 귀속 재료가 나뉘어져있고 거래 가능 재료의 가격이 계속 변하기 때문에 효율적인 재련 순서나 방법이 매번 바뀌게 됩니다.
 
 보조 재료인 숨결이나 책을 사용하는 것이 이득일 때도 있고 오히려 손해인 경우도 있습니다.
 
 일반 재련보다 상급 재련을 먼저하는게 목표레벨 달성이 쉬운 구간이 있고 반대로 상급 재련이 일반 재련보다 효율적인 구간도 있습니다.
 
-예를들어 위의 사진은 효율적인 재련 순서를 알려주는 외부 사이트인데 방어구 재련 순서를 보시면 일반재련 12강 > 상급 재련 20 > 일반 재련 19강 > 상급 재련 40 순으로 효율이 좋다고 나와있습니다.
-
 매번 재련 효율이 다르기 때문에 효율적인 재련 방법을 찾아서 재련을 하는게 좋은데 외부 사이트들을 사용하면 쉽게 찾을 수 있습니다.
 
-
+#### 로아업
+:::site-card
+title: 로아업 LoaUp - 로스트아크 캐릭터 스펙업 효율 및 우선순위
+url: https://loaup.com/refine-calculator
+desc: 로스트아크 캐릭터 정보 조회 및 개인화 스펙업 효율 우선순위 분석 서비스입니다.
+image: /images/sites/11.png
+:::
+#### 로아가드
+:::site-card
+title: 로아가드(LoaGuard) - 로스트아크 캐릭터 조회·전투력 랭킹·내실·레이드 헬퍼·고정 공대
+url: https://loaguard.com/
+desc: 캐릭터 스펙·전투력 랭킹·내실 진행도부터 레이드 헬퍼·고정 공대 일정까지. 로스트아크 올인원 도구.
+image: /images/sites/10.png
+:::
+#### 로아랩
+:::site-card
+title: 통합 재련 계산기 | LOALAB
+url: https://lo4.app/tools/refine
+desc: 캐릭터 검색으로 일반·상급 재련 목표와 필요 재료를 계산하고, 일반 재련·상급 재련 계산기와 특재 효율을 한 곳에서 확인하세요.
+image: /images/sites/lo4.app.png
+:::
+#### 로펙
+:::site-card
+title: 로펙 | 로스트아크 환산 점수·시뮬레이터
+url: https://lopec.kr/
+desc: 로스트아크 캐릭터 환산 점수, 장비, 랭킹, 시뮬레이터까지 한 번에 확인하세요.
+image: /images/sites/lopec.kr.png
+:::
 
 
 ### 특수 재련
@@ -136,27 +159,69 @@ image: /images/sites/lopec.kr.png
 
 어떤 추가 재료를 어느 타이밍에 사용하는게 좋은지는 외부 사이트에서 쉽게 확인할 수 있습니다
 
-![이미지 236](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0236.png)
-
-#### [➡️ 로아업](https://loaup.com/refine-efficiency)
-
-![이미지 237](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0237.png)
-
-#### [➡️ 로아또](https://loatto.kr/advanced-refining)
-
-![이미지 238](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0238.png)
-
-#### [➡️ 아이스펭](https://loa.icepeng.com/advanced-refining)
+#### 아이스펭
+:::site-card
+title: LoaCalc
+url: https://loa.icepeng.com/
+desc: 로스트아크 최적화 계산기 - 각인, 트포, 재련, 세공
+:::
+#### 모코코
+:::site-card
+title: 모코코 - 로스트아크 팬사이트
+url: https://mokoko.co.kr/upgrade-calculator
+desc: 재련 비용 사이트
+image: /images/sites/mokoko.co.kr.webp
+:::
+#### 로아베스팅
+:::site-card
+title: 로아베스팅
+url: https://www.loavesting.com/
+desc: 재련 견적 사이트 
+:::
+#### 로아가드
+:::site-card
+title: 통합 재련 플랜 · 일반·상급 재련 계산기 · LoaGuard
+url: https://loaguard.com/honing/
+desc: 통합 재련 플랜·일반 재련 효율·상급 재련 보조재료 전략을 한곳에서 계산합니다. 업화·전율·계승 경로 포함 6부위 최소비용 경로를 자동 산출합니다.
+image: /images/sites/10.png
+:::
+#### 로아또
+:::site-card
+title: 통합재련 시뮬레이터 | Loatto
+url: https://loatto.kr/refining-simulator
+desc: 여러 재련단계를 통합해서 확인하고 장비성장 및 담금질 비용을 포함하여 계산합니다. 장비별 강화 계획을 세워보세요.
+image: /images/sites/05.png
+:::
+#### 로아랩
+:::site-card
+title: 통합 재련 계산기 | LOALAB
+url: https://lo4.app/tools/refine
+desc: 캐릭터 검색으로 일반·상급 재련 목표와 필요 재료를 계산하고, 일반 재련·상급 재련 계산기와 특재 효율을 한 곳에서 확인하세요.
+image: /images/sites/lo4.app.png
+:::
+#### 로아갭
+:::site-card
+title: 상급 재련 효율 계산기 | LOAGAP
+url: https://loagap.com/efficiency/enhance
+desc: 로스트아크 상급 재련 비용 대비 효율을 실시간 시세로 분석하고, 최적의 재련 루트를 제안하는 계산기입니다.
+image: /images/sites/loagap.com.png
+:::
+#### 로펙
+:::site-card
+title: 강화 최적화 | 로펙
+url: https://lopec.kr/tool/enhancement
+desc: 로스트아크 캐릭터 환산 점수, 장비, 랭킹, 시뮬레이터까지 한 번에 확인하세요.
+image: /images/sites/lopec.kr.png
+:::
+#### 로아가드
+:::site-card
+title: 통합 재련 플랜 · 일반·상급 재련 계산기 · LoaGuard
+url: https://loaguard.com/honing
+desc: 통합 재련 플랜·일반 재련 효율·상급 재련 보조재료 전략을 한곳에서 계산합니다. 업화·전율·계승 경로 포함 6부위 최소비용 경로를 자동 산출합니다.
+image: /images/sites/10.png
+:::
 
 이런 사이트들에서 본인이 가지고 있는 귀속 재화를 입력하고 최적의 효율을 찾아서 상급재련을 진행하시면 됩니다.
-
-### 상급 재련 순서
-
-![이미지 173](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0173.png)
-
-일반 재련에서도 설명을 했지만 재련과 상급 재련은 효율이 바뀌는 구간이 존재합니다. 
-
-물론 최종적으로는 둘 다 하는게 맞지만 저레벨 구간에서는 효율이 더 좋은 방법을 먼저 사용하는게 좋기 때문에 재련에서 설명한 것처럼 외부 사이트를 활용해 효율적인 순서로 재련을 하시는게 좋습니다.
 
 ## 각인
 
