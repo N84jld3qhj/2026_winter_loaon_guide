@@ -255,6 +255,9 @@
 
 영지 제작 시 세팅에 따라 수익이 큰 차이가 나게 됩니다. 
 
+
+:::site-card-grid
+columns: 4
 ### 로스트골드
 :::site-card
 title: 로스트골드 - 효율적인 골드 수급·소비
@@ -290,5 +293,5 @@ url: https://zloa.net/craft
 desc: 즐로아 ZLOA - 로스트아크 환산 점수, 랭킹
 image: /images/sites/06.png
 :::
-
+:::
 이런 외부 사이트들에서 영지 제작 효율을 찾아보시고 재료를 직접 팔지 영지 제작 후 판매할지 결정하시면 되겠습니다.

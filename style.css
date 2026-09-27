@@ -899,13 +899,28 @@ html[data-theme="dark"] mark {
 /* 1. 이미지 그리드 컨테이너 설정 */
 .img-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--sp-3);
     align-items: start;
     margin: 0;
     padding: 0;
     width: 100%;
-    max-width: 70%;
+    max-width: 90%;
+}
+.img-grid.columns-1 {
+    grid-template-columns: 1fr;
+}
+
+.img-grid.columns-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.img-grid.columns-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.img-grid.columns-4 {
+    grid-template-columns: repeat(4, 1fr);
 }
 
 /* 2. p 태그를 레이아웃에서 무시하고 자식(img)을 직접 그리드로 승격 */
@@ -1264,7 +1279,24 @@ main.main-content a.link-card:hover {
     gap: var(--sp-4);
     margin: var(--sp-5) 0;
 }
+.site-card-grid.columns-1 {
+    grid-template-columns: 1fr;
+}
 
+.site-card-grid.columns-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.site-card-grid.columns-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.site-card-grid.columns-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.site-card-grid.columns-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
 main.main-content a.site-card {
     display: flex;
     align-items: stretch;
