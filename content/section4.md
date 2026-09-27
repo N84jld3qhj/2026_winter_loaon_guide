@@ -54,7 +54,9 @@
 
 • 휴식 보너스가 일정 수치 쌓여 있는 상태에서 콘텐츠를 진행하면 추가적으로 보상을 획득할 수 있습니다.
 
-쉽게 말해서 3일동안 1번만 클리어하면 2회치 보상을 얻을 수 있는 시스템입니다. 일일숙제를 할 시간이 부족하거나 낮은 레벨의 캐릭터라서 보상이 적어서 시간이 아깝거나 하는 경우 사용하시면 되는 시스템입니다.
+쉽게 말해서 3일동안 1번만 클리어하면 2회치 보상을 얻을 수 있는 시스템입니다. 
+
+일일숙제를 할 시간이 부족하거나 낮은 레벨의 캐릭터라서 보상이 적어서 시간이 아깝거나 하는 경우 사용하시면 되는 시스템입니다.
 
 ## 에포나 의뢰
 ![이미지 35](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0035.png)
@@ -251,6 +253,42 @@
 
 영지에서 생활 재료를 사용해 융화 재료나 배틀 아이템을 제작할 수 있습니다.
 
-![이미지 45](https://raw.githubusercontent.com/N84jld3qhj/2026_winter_loaon_guide/main/images/0045.png)
+영지 제작 시 세팅에 따라 수익이 큰 차이가 나게 됩니다. 
 
-재료를 직접 팔아서 얻는 골드와 제작 후 제작된 아이템을 팔아서 얻는 골드를 비교하게 되는데 [➡️ 로아도구](https://loatool.taeu.kr/) 나 [➡️ 즐로아](https://zloa.net/craft) 사이트를 이용하시면 어떤게 이득인지 쉽게 확인이 가능합니다.
+### 로스트골드
+:::site-card
+title: 로스트골드 - 효율적인 골드 수급·소비
+url: https://lostgld.com/
+desc: 로스트아크 재화 수급 계산기
+image: /images/sites/08.png
+:::
+### 로아도구
+:::site-card
+title: 로아도구 - 로스트아크 실시간 정보 제공 사이트
+url: https://loatool.taeu.kr/
+desc: 영지 제작 효율을 확인할 수 있습니다. 본인 영지 세팅 입력 후 제작 효율을 확인할 수 있습니다.
+image: /images/sites/loatool.taeu.kr.png
+:::
+### 로아로골
+:::site-card
+title: 로아로골 | 벌목 계산기 - 생활 효율, 융화재료 제작
+url: https://loalogol.kr/life-master
+desc: 로아로골 벌목 효율, 로아 생활 효율, 로아 융화재료 제작 손익을 실시간 시세로 계산하세요.
+image: /images/sites/loalogol.kr.png
+:::
+### 로아랩
+:::site-card
+title: 아비도스 쌀산기 | LOALAB
+url: https://lo4.app/tools/item-craft
+desc: 로스트아크 생활 제작 수익을 계산하세요. 재료 가격을 입력하면 제작 비용과 수익을 분석할 수 있습니다.
+image: /images/sites/lo4.app.png
+:::
+### 즐로아
+:::site-card
+title: 즐로아 ZLOA - 로스트아크 환산 점수, 랭킹
+url: https://zloa.net/craft
+desc: 즐로아 ZLOA - 로스트아크 환산 점수, 랭킹
+image: /images/sites/06.png
+:::
+
+이런 외부 사이트들에서 영지 제작 효율을 찾아보시고 재료를 직접 팔지 영지 제작 후 판매할지 결정하시면 되겠습니다.
