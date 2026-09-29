@@ -1041,8 +1041,12 @@ html[data-theme="dark"] mark {
 /* 모바일 대응 (768px 이하 1열) */
 @media (max-width: 768px) {
 .img-grid,
+.img-grid.columns-1,
+.img-grid.columns-2,
+.img-grid.columns-3,
+.img-grid.columns-4,
     .img-grid p {
-        grid-template-columns: 1fr;
+       grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -1439,7 +1443,12 @@ main.main-content a.site-card:hover .site-card-arrow {
     transform: translate(2px, -2px);
 }
 @media (max-width: 768px) {
-    .site-card-grid {
+    .site-card-grid,
+    .site-card-grid.columns-1,
+    .site-card-grid.columns-2,
+    .site-card-grid.columns-3,
+    .site-card-grid.columns-4,
+    .site-card-grid.columns-5 { 
         grid-template-columns: 1fr;
     }
 }
