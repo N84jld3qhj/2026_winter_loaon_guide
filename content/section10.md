@@ -110,13 +110,7 @@ url: https://lopec.kr/tool/enhancement
 desc: 로스트아크 캐릭터 환산 점수, 장비, 랭킹, 시뮬레이터까지 한 번에 확인하세요.
 image: /images/sites/lopec.kr.png
 :::
-### 로아가드
-:::site-card
-title: 통합 재련 플랜 · 일반·상급 재련 계산기 · LoaGuard
-url: https://loaguard.com/honing
-desc: 통합 재련 플랜·일반 재련 효율·상급 재련 보조재료 전략을 한곳에서 계산합니다. 업화·전율·계승 경로 포함 6부위 최소비용 경로를 자동 산출합니다.
-image: /images/sites/10.png
-:::
+
 
 ## 스펙업 시뮬레이션
 

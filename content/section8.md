@@ -160,7 +160,7 @@ image: /images/sites/lopec.kr.png
 
 어떤 추가 재료를 어느 타이밍에 사용하는게 좋은지는 외부 사이트에서 쉽게 확인할 수 있습니다
 ::: site-card-grid
-columns: 3
+columns: 4
 #### 아이스펭
 :::site-card
 title: LoaCalc
@@ -214,13 +214,6 @@ title: 강화 최적화 | 로펙
 url: https://lopec.kr/tool/enhancement
 desc: 로스트아크 캐릭터 환산 점수, 장비, 랭킹, 시뮬레이터까지 한 번에 확인하세요.
 image: /images/sites/lopec.kr.png
-:::
-#### 로아가드
-:::site-card
-title: 통합 재련 플랜 · 일반·상급 재련 계산기 · LoaGuard
-url: https://loaguard.com/honing
-desc: 통합 재련 플랜·일반 재련 효율·상급 재련 보조재료 전략을 한곳에서 계산합니다. 업화·전율·계승 경로 포함 6부위 최소비용 경로를 자동 산출합니다.
-image: /images/sites/10.png
 :::
 :::
 이런 사이트들에서 본인이 가지고 있는 귀속 재화를 입력하고 최적의 효율을 찾아서 상급재련을 진행하시면 됩니다.
